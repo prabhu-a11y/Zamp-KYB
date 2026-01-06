@@ -15,7 +15,7 @@ print(f"Checking key: {api_key[:5]}...{api_key[-5:]}")
 genai.configure(api_key=api_key)
 
 try:
-    model = genai.GenerativeModel('gemini-2.5-flash-lite')
+    model = genai.GenerativeModel('gemini-1.5-flash')
     response = model.generate_content("Hello, can you hear me?")
     print("✅ Success! API Response:")
     print(response.text)

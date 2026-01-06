@@ -215,7 +215,7 @@ async def extract_qr_url(file_path: str):
         sample_file = genai.upload_file(file_path)
         print(f"Uploaded file to Gemini: {sample_file.uri}")
 
-        model = genai.GenerativeModel("gemini-2.5-flash-lite")
+        model = genai.GenerativeModel("gemini-1.5-flash")
         
         prompt = """
         Extract the URL encoded in the QR code within this image. 
@@ -322,7 +322,7 @@ async def match_addresses(request: AddressMatchRequest):
         if not GENAI_API_KEY:
              return {"match": False, "reason": "No API Key"}
 
-        model = genai.GenerativeModel('gemini-2.5-flash-lite')
+        model = genai.GenerativeModel('gemini-1.5-flash')
         prompt = f"""
         Compare these two addresses and determine if they refer to the same location/building/entity.
         Address 1: "{request.address1}"
@@ -357,7 +357,7 @@ async def match_names(request: NameMatchRequest):
         if not GENAI_API_KEY:
              return {"match": False, "reason": "No AI Key"}
 
-        model = genai.GenerativeModel('gemini-2.5-flash-lite')
+        model = genai.GenerativeModel('gemini-1.5-flash')
         prompt = f"""
         Compare these two names:
         Name 1: "{request.name1}"
@@ -500,7 +500,7 @@ async def chat_help(request: HelpChatRequest):
         if not GENAI_API_KEY:
             raise HTTPException(status_code=500, detail="Gemini API Key not configured")
 
-        model = genai.GenerativeModel('gemini-2.5-flash-lite')
+        model = genai.GenerativeModel('gemini-1.5-flash')
         knowledge_base_content = get_knowledge_base()
         
         system_instruction = f"""You are a helpful assistant for Wio Business Onboarding.

@@ -15,7 +15,7 @@ export const extractEmiratesIdData = async (file: File) => {
             throw new Error("Missing API Key");
         }
 
-        const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-lite" });
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
         const base64Data = await fileToGenerativePart(file);
 
         const prompt = `
@@ -33,7 +33,7 @@ export const extractEmiratesIdData = async (file: File) => {
       Do not include markdown formatting like \`\`\`json. Just the raw JSON.
     `;
 
-        console.log("Using model: gemini-2.5-flash-lite");
+        console.log("Using model: gemini-1.5-flash");
         const result = await model.generateContent([prompt, base64Data]);
         const response = await result.response;
         const text = response.text();
@@ -50,7 +50,7 @@ export const extractAllTradeLicenseData = async (file: File) => {
     try {
         if (!API_KEY) throw new Error("Missing API Key");
         const base64Data = await fileToGenerativePart(file);
-        const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-lite" });
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
         const prompt = `
       Analyze this Trade License document and extract the following information into a strict JSON format.
@@ -79,7 +79,7 @@ export const extractFreelancerPermitData = async (file: File) => {
     try {
         if (!API_KEY) throw new Error("Missing API Key");
         const base64Data = await fileToGenerativePart(file);
-        const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-lite" });
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
         const prompt = `
       Analyze this Freelancer Permit document and extract the following information into a strict JSON format.
@@ -107,7 +107,7 @@ export const extractMOAData = async (file: File) => {
     try {
         if (!API_KEY) throw new Error("Missing API Key");
         const base64Data = await fileToGenerativePart(file);
-        const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-lite" });
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
         const prompt = `
       Analyze this Memorandum of Association(MOA) and extract the shareholders and their ownership stakes.
@@ -134,7 +134,7 @@ export const extractPOAData = async (file: File) => {
     try {
         if (!API_KEY) throw new Error("Missing API Key");
         const base64Data = await fileToGenerativePart(file);
-        const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-lite" });
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
         const prompt = `
       Analyze this Power of Attorney(POA) document and extract the following details into a strict JSON format.
