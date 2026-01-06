@@ -40,8 +40,8 @@ const DashboardLayout = () => {
             {isSidebarOpen && (
                 <div className="w-[230px] bg-white flex flex-col flex-shrink-0 transition-all duration-300 relative border-r border-gray-200">
                     {/* Logo Area */}
-                    <div className="h-12 flex items-center justify-between px-4">
-                        <img src="/logooo.svg" alt="Pace Logo" className="h-7 w-auto" />
+                    <div className="h-12 flex items-center justify-between px-3">
+                        <img src={checkIcon} alt="check" className="w-6 h-6" />
                         <button
                             onClick={() => setIsSidebarOpen(!isSidebarOpen)}
                             className="text-gray-500 hover:text-gray-700 focus:outline-none"
@@ -163,7 +163,7 @@ const DashboardLayout = () => {
                     <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center gap-2 px-3.5 py-1.5 bg-gray-50/50 border border-gray-100 rounded-lg">
                         <div className="flex items-center gap-1.5 opacity-70">
                             <Plus className="w-3.5 h-3.5 text-gray-400" />
-                            <span className="text-[11px] font-medium text-gray-500">Work with Pace</span>
+                            <span className="text-[11px] font-medium text-gray-500">Work with Zamp</span>
                         </div>
                         <div className="flex items-center gap-1 ml-1">
                             <kbd className="px-1.5 py-0.5 text-[10px] font-bold text-gray-400 bg-white border border-gray-200 rounded shadow-sm">
