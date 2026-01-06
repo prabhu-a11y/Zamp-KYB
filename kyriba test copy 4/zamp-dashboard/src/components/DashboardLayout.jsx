@@ -35,7 +35,7 @@ const DashboardLayout = () => {
         <div className="flex h-screen bg-gray-50">
             {/* Sidebar */}
             {isSidebarOpen && (
-                <div className="w-[230px] bg-white flex flex-col flex-shrink-0 transition-all duration-300 relative border-r border-gray-200">
+                <div className="w-[230px] bg-white flex flex-col flex-shrink-0 transition-all duration-300 relative">
                     {/* Logo Area */}
                     <div className="h-12 flex items-center justify-between px-3">
                         <img src={checkIcon} alt="check" className="w-6 h-6" />
