@@ -134,41 +134,28 @@ const DashboardLayout = () => {
             {/* Main Content */}
             <div className="flex-1 flex flex-col overflow-hidden">
                 {/* Header */}
-                <header className="h-12 border-b border-gray-200 flex items-center justify-between px-4 bg-white relative">
-                    <div className="flex items-center gap-3">
+                <header className="h-14 border-b border-gray-100 flex items-center justify-between px-6 bg-white relative">
+                    <div className="flex items-center gap-4">
                         {!isSidebarOpen && (
                             <button
                                 onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-                                className="text-gray-500 hover:text-gray-700 focus:outline-none"
+                                className="text-gray-400 hover:text-gray-600 focus:outline-none"
                             >
-                                <PanelLeft className="w-4 h-4" />
+                                <PanelLeft className="w-5 h-5" />
                             </button>
                         )}
 
-                        <div className="flex items-center gap-2 text-xs">
-                            {isProcessDetailPage && (
-                                <>
-                                    <button
-                                        onClick={() => navigate('/done')}
-                                        className="hover:bg-gray-100 rounded p-1 -ml-1"
-                                    >
-                                        <ArrowLeft className="w-3.5 h-3.5 text-gray-500" />
-                                    </button>
-                                    <span className="text-gray-500">Client Onboarding</span>
-                                    <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-                                    <span className="text-gray-900 font-medium">Activity Logs</span>
-                                </>
-                            )}
-                            {!isProcessDetailPage && (
-                                <span className="text-gray-900 font-medium">Client Onboarding</span>
-                            )}
+                        <div className="flex items-center gap-2">
+                            <span className="text-[15px] font-semibold text-gray-900">
+                                {isProcessDetailPage ? "Activity Logs" : "Accounts Payable"}
+                            </span>
                         </div>
                     </div>
 
                     {/* Centered Work with Pace */}
-                    <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center gap-2 px-2.5 py-1.5 bg-gray-50 rounded-md border border-gray-200">
-                        <span className="text-[11px] text-gray-500">Work with Pace</span>
-                        <kbd className="px-1.5 py-0.5 text-[10px] font-semibold text-gray-600 bg-white border border-gray-200 rounded">
+                    <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center gap-2 px-3 py-1 bg-gray-50 border border-gray-200 rounded-lg shadow-sm">
+                        <span className="text-[11px] font-medium text-gray-500">Work with Zamp</span>
+                        <kbd className="px-1.5 py-0.5 text-[10px] font-bold text-gray-400 bg-white border border-gray-200 rounded shadow-xs">
                             K
                         </kbd>
                     </div>
@@ -176,29 +163,23 @@ const DashboardLayout = () => {
                     <div className="flex items-center gap-3">
                         <button
                             onClick={() => navigate('/done/knowledge-base')}
-                            className="p-1.5 hover:bg-gray-50 rounded border border-gray-200"
+                            className="p-1.5 hover:bg-gray-50 rounded-lg border border-gray-100 text-gray-500"
                         >
-                            <BookOpen className="w-4 h-4 text-gray-600" />
+                            <BookOpen className="w-5 h-5" />
                         </button>
 
-                        <button className="flex items-center gap-1.5 px-2.5 py-1.5 text-[11px] text-gray-700 hover:bg-gray-50 rounded font-medium border border-gray-200">
+                        <button className="flex items-center gap-2 px-3 py-1.5 text-[12px] font-semibold text-gray-600 hover:bg-gray-50 rounded-lg border border-gray-200 transition-colors">
+                            <Share2 className="w-4 h-4" />
                             Share
                         </button>
                     </div>
-
-                    {/* Curved corner - only when sidebar is open */}
-                    {isSidebarOpen && (
-                        <div className="absolute left-0 top-0 w-4 h-4 pointer-events-none">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 16C0 7.163 7.163 0 16 0V16H0Z" fill="#F9FAFB" />
-                            </svg>
-                        </div>
-                    )}
                 </header>
 
                 {/* Page Content */}
-                <main className="flex-1 h-full bg-gray-50">
-                    <Outlet />
+                <main className="flex-1 overflow-hidden p-6 bg-gray-50 flex flex-col">
+                    <div className="flex-1 bg-white rounded-[40px] border border-gray-100 shadow-sm overflow-hidden p-0">
+                        <Outlet />
+                    </div>
                 </main>
             </div>
         </div>

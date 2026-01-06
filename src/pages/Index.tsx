@@ -48,7 +48,7 @@ import { extractEmiratesIdData, extractAllTradeLicenseData, extractFreelancerPer
 import { HelpChat } from "@/components/chat/screens/HelpChat";
 
 // --- Zamp Integration Helpers ---
-const ZAMP_API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+const ZAMP_API_URL = import.meta.env.VITE_API_URL || "";
 
 const initZampProcess = async () => {
   try {
