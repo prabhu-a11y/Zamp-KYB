@@ -15,7 +15,9 @@ import {
     LogOut,
     ArrowLeft,
     ChevronRight,
-    Menu
+    Menu,
+    MessageSquare,
+    Plus
 } from 'lucide-react';
 
 const DashboardLayout = () => {
@@ -35,7 +37,7 @@ const DashboardLayout = () => {
         <div className="flex h-screen bg-gray-50">
             {/* Sidebar */}
             {isSidebarOpen && (
-                <div className="w-[230px] bg-white flex flex-col flex-shrink-0 transition-all duration-300 relative">
+                <div className="w-[230px] bg-white flex flex-col flex-shrink-0 transition-all duration-300 relative border-r border-gray-200">
                     {/* Logo Area */}
                     <div className="h-12 flex items-center justify-between px-3">
                         <img src={checkIcon} alt="check" className="w-6 h-6" />
@@ -146,30 +148,62 @@ const DashboardLayout = () => {
                         )}
 
                         <div className="flex items-center gap-2">
-                            <span className="text-[15px] font-semibold text-gray-900">
-                                {isProcessDetailPage ? "Activity Logs" : "Client onboarding"}
+                            <span className="text-[17px] font-bold text-gray-900 tracking-tight">
+                                {isProcessDetailPage ? "Activity Logs" : "Client Onboarding"}
                             </span>
                         </div>
                     </div>
 
                     {/* Centered Work with Pace */}
-                    <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center gap-2 px-3 py-1 bg-gray-50 border border-gray-200 rounded-lg shadow-sm">
-                        <span className="text-[11px] font-medium text-gray-500">Work with Zamp</span>
-                        <kbd className="px-1.5 py-0.5 text-[10px] font-bold text-gray-400 bg-white border border-gray-200 rounded shadow-xs">
-                            K
-                        </kbd>
+                    <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center gap-2 px-3.5 py-1.5 bg-gray-50/50 border border-gray-100 rounded-lg">
+                        <div className="flex items-center gap-1.5 opacity-70">
+                            <Plus className="w-3.5 h-3.5 text-gray-400" />
+                            <span className="text-[11px] font-medium text-gray-500">Work with Pace</span>
+                        </div>
+                        <div className="flex items-center gap-1 ml-1">
+                            <kbd className="px-1.5 py-0.5 text-[10px] font-bold text-gray-400 bg-white border border-gray-200 rounded shadow-sm">
+                                ⌘
+                            </kbd>
+                            <kbd className="px-1.5 py-0.5 text-[10px] font-bold text-gray-400 bg-white border border-gray-200 rounded shadow-sm">
+                                K
+                            </kbd>
+                        </div>
                     </div>
 
                     <div className="flex items-center gap-3">
-                        <button
-                            onClick={() => navigate('/done/knowledge-base')}
-                            className="p-1.5 hover:bg-gray-50 rounded-lg border border-gray-100 text-gray-500"
-                        >
-                            <BookOpen className="w-5 h-5" />
-                        </button>
+                        <div className="flex items-center border border-gray-200 rounded-lg overflow-hidden">
+                            <button className="p-1.5 hover:bg-gray-50 border-r border-gray-200 text-gray-500">
+                                <BookOpen className="w-4 h-4" />
+                            </button>
+                            <button className="p-1.5 hover:bg-gray-50 text-gray-500">
+                                <MessageSquare className="w-4 h-4" />
+                            </button>
+                        </div>
+
+                        {/* Status Badges from Reference */}
+                        <div className="flex items-center gap-1.5 px-1 py-1 bg-gray-50/50 border border-gray-200 rounded-lg">
+                            <div className="flex items-center gap-1 px-1.5 py-0.5">
+                                <div className="w-4 h-4 bg-blue-500 rounded flex items-center justify-center text-[10px] text-white font-bold">C</div>
+                                <span className="text-[11px] font-bold text-gray-600">9</span>
+                            </div>
+                            <div className="w-px h-3 bg-gray-200"></div>
+                            <div className="flex items-center gap-1 px-1.5 py-0.5">
+                                <div className="w-4 h-4 bg-gray-400 rounded flex items-center justify-center text-[10px] text-white font-bold">L</div>
+                                <span className="text-[11px] font-bold text-gray-600">2</span>
+                            </div>
+                            <div className="w-px h-3 bg-gray-200"></div>
+                            <div className="flex items-center gap-1 px-1.5 py-0.5">
+                                <div className="w-4 h-4 bg-orange-400 rounded flex items-center justify-center text-[10px] text-white font-bold">S</div>
+                                <span className="text-[11px] font-bold text-gray-600">1</span>
+                            </div>
+                            <div className="w-px h-3 bg-gray-200"></div>
+                            <div className="flex items-center gap-1 px-1.5 py-0.5">
+                                <div className="w-4 h-4 bg-green-500 rounded flex items-center justify-center text-[10px] text-white font-bold">✓</div>
+                                <span className="text-[11px] font-bold text-gray-600">1</span>
+                            </div>
+                        </div>
 
                         <button className="flex items-center gap-2 px-3 py-1.5 text-[12px] font-semibold text-gray-600 hover:bg-gray-50 rounded-lg border border-gray-200 transition-colors">
-                            <Share2 className="w-4 h-4" />
                             Share
                         </button>
                     </div>

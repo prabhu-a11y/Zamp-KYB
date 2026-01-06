@@ -68,6 +68,11 @@ const ProcessList = () => {
             icon: '/file3.svg',
             title: 'No completed processes',
             description: 'Completed processes will appear here.'
+        },
+        'Needs Review': {
+            icon: '/file2.svg',
+            title: 'No pending reviews',
+            description: 'Processes needing review will appear here.'
         }
     };
 
@@ -94,28 +99,35 @@ const ProcessList = () => {
                     <button
                         key={tab.status}
                         onClick={() => setActiveTab(tab.status)}
-                        className={`flex items-center gap-2.5 px-3.5 py-1.5 text-[12px] font-semibold rounded-full transition-all duration-200 border ${activeTab === tab.status
-                            ? `bg-gray-100/80 text-gray-900 border-gray-200 shadow-sm`
-                            : 'bg-transparent text-gray-500 hover:text-gray-700 hover:bg-gray-50 border-transparent'
+                        className={`flex items-center gap-2 py-1.5 transition-all duration-200 rounded-lg ${activeTab === tab.status
+                            ? `px-3 bg-gray-100/60 text-gray-900 ring-1 ring-gray-200/50 shadow-sm`
+                            : 'bg-transparent text-gray-500 hover:text-gray-700'
                             }`}
                     >
-                        <div className={`w-2 h-2 rounded-[2px] border ${tab.name === 'Needs attention' ? "bg-red-50 border-red-400" :
-                            tab.name === 'Needs review' ? "bg-orange-50 border-orange-400" :
-                                tab.name === 'Void' ? "bg-gray-100 border-gray-300" :
-                                    tab.name === 'In progress' ? "bg-blue-50 border-blue-400" :
-                                        "bg-green-100 border-green-700"
+                        <div className={`w-2.5 h-2.5 rounded-[3px] border ${tab.name === 'Needs attention' ? "bg-red-100 border-red-500" :
+                            tab.name === 'Needs review' ? "bg-orange-100 border-orange-500" :
+                                tab.name === 'Void' ? "bg-gray-200 border-gray-400" :
+                                    tab.name === 'In progress' ? "bg-blue-100 border-blue-500" :
+                                        "bg-green-100 border-green-600"
                             }`} />
-                        <span>{tab.name}</span>
-                        <span className="text-gray-400 font-medium ml-0.5">{tab.count}</span>
+                        <span className="text-[13px] font-medium leading-none">{tab.name}</span>
+                        <span className="text-[13px] text-gray-400 font-medium ml-0.5">{tab.count}</span>
                     </button>
                 ))}
             </div>
 
-            {/* Filter Button */}
-            <div className="flex justify-between items-center px-6 pb-3">
-                <button className="flex items-center gap-1.5 px-2 py-1 text-[11px] font-medium text-gray-600 hover:bg-gray-50 rounded border border-gray-200">
-                    <Filter className="w-3 h-3" />
+            {/* Filter Button Row */}
+            <div className="flex justify-between items-center px-8 py-2 border-t border-gray-50">
+                <button className="flex items-center gap-2 px-3 py-1.5 text-[13px] font-medium text-gray-600 bg-white hover:bg-gray-50 rounded-lg border border-gray-200 transition-colors">
+                    <Filter className="w-3.5 h-3.5" />
                     Filter
+                </button>
+
+                {/* Secondary filter icon on the right */}
+                <button className="p-1.5 text-gray-400 hover:text-gray-600">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <line x1="4" y1="21" x2="4" y2="14" /><line x1="4" y1="10" x2="4" y2="3" /><line x1="12" y1="21" x2="12" y2="12" /><line x1="12" y1="8" x2="12" y2="3" /><line x1="20" y1="21" x2="20" y2="16" /><line x1="20" y1="12" x2="20" y2="3" /><line x1="1" y1="14" x2="7" y2="14" /><line x1="9" y1="8" x2="15" y2="8" /><line x1="17" y1="16" x2="23" y2="16" />
+                    </svg>
                 </button>
             </div>
 
@@ -125,24 +137,24 @@ const ProcessList = () => {
                     <div className="overflow-x-auto">
                         <table className="min-w-full">
                             <thead>
-                                <tr className="border-t border-b border-gray-200">
-                                    <th className="w-8 px-6 py-2"></th>
-                                    <th className="px-4 py-2 text-left text-xs font-normal text-gray-500">
-                                        Process Name
+                                <tr className="border-t border-b border-gray-50">
+                                    <th className="w-12 px-8 py-3"></th>
+                                    <th className="px-4 py-3 text-left text-[11px] font-medium text-gray-400 uppercase tracking-wider">
+                                        Current Status
                                     </th>
-                                    <th className="px-4 py-2 text-center text-xs font-normal text-gray-500">
+                                    <th className="px-4 py-3 text-center text-[11px] font-medium text-gray-400 uppercase tracking-wider">
                                         Case Id
                                     </th>
-                                    <th className="px-4 py-2 text-left text-xs font-normal text-gray-500">
+                                    <th className="px-4 py-3 text-left text-[11px] font-medium text-gray-400 uppercase tracking-wider">
                                         Applicant Name
                                     </th>
-                                    <th className="px-4 py-2 text-left text-xs font-normal text-gray-500">
+                                    <th className="px-4 py-3 text-left text-[11px] font-medium text-gray-400 uppercase tracking-wider">
                                         Entity Name
                                     </th>
-                                    <th className="px-4 py-2 text-center text-xs font-normal text-gray-500">
+                                    <th className="px-4 py-3 text-center text-[11px] font-medium text-gray-400 uppercase tracking-wider">
                                         Receipt Date
                                     </th>
-                                    <th className="px-6 py-2 text-left text-xs font-normal text-gray-500">
+                                    <th className="px-8 py-3 text-left text-[11px] font-medium text-gray-400 uppercase tracking-wider">
                                         Status
                                     </th>
                                 </tr>
