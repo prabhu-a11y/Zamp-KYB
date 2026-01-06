@@ -117,8 +117,8 @@ const ProcessList = () => {
             </div>
 
             {/* Filter Button Row */}
-            <div className="flex justify-between items-center px-8 py-2 border-t border-gray-50">
-                <button className="flex items-center gap-2 px-3 py-1.5 text-[13px] font-medium text-gray-600 bg-white hover:bg-gray-50 rounded-lg border border-gray-200 transition-colors">
+            <div className="flex justify-between items-center px-8 pb-4">
+                <button className="flex items-center gap-1.5 px-3 py-1.5 text-[12px] font-medium text-gray-500 hover:bg-gray-50 rounded-lg border border-gray-200/60 shadow-xs transition-all">
                     <Filter className="w-3.5 h-3.5" />
                     Filter
                 </button>
@@ -137,22 +137,22 @@ const ProcessList = () => {
                     <div className="overflow-x-auto">
                         <table className="min-w-full">
                             <thead>
-                                <tr className="border-t border-b border-gray-50">
-                                    <th className="w-12 px-8 py-3"></th>
+                                <tr className="border-t border-b border-gray-100">
+                                    <th className="w-8 px-8 py-3"></th>
                                     <th className="px-4 py-3 text-left text-[11px] font-medium text-gray-400 uppercase tracking-wider">
                                         Current Status
                                     </th>
                                     <th className="px-4 py-3 text-center text-[11px] font-medium text-gray-400 uppercase tracking-wider">
-                                        Case Id
+                                        Invoice Number
                                     </th>
                                     <th className="px-4 py-3 text-left text-[11px] font-medium text-gray-400 uppercase tracking-wider">
                                         Applicant Name
                                     </th>
                                     <th className="px-4 py-3 text-left text-[11px] font-medium text-gray-400 uppercase tracking-wider">
-                                        Entity Name
+                                        Invoice Current...
                                     </th>
                                     <th className="px-4 py-3 text-center text-[11px] font-medium text-gray-400 uppercase tracking-wider">
-                                        Receipt Date
+                                        Invoice Date
                                     </th>
                                     <th className="px-8 py-3 text-left text-[11px] font-medium text-gray-400 uppercase tracking-wider">
                                         Status

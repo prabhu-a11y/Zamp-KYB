@@ -17,7 +17,8 @@ import {
     ChevronRight,
     Menu,
     MessageSquare,
-    Plus
+    Plus,
+    Box
 } from 'lucide-react';
 
 const DashboardLayout = () => {
@@ -58,12 +59,16 @@ const DashboardLayout = () => {
                             <NavLink
                                 to="/done/people"
                                 className={({ isActive }) =>
-                                    `flex items-center px-3 py-1.5 text-xs ${isActive ? 'bg-gray-50 text-gray-900' : 'text-gray-600 hover:bg-gray-50'}`
+                                    `flex items-center px-3 py-2 text-sm ${isActive ? 'bg-gray-50 text-gray-900' : 'text-gray-600 hover:bg-gray-50'}`
                                 }
                             >
-                                <Users className="w-3.5 h-3.5 mr-2.5" />
+                                <Users className="w-4 h-4 mr-3" />
                                 People
                             </NavLink>
+                            <a href="#" className="flex items-center px-3 py-2 text-sm text-gray-600 hover:bg-gray-50">
+                                <Box className="w-4 h-4 mr-3" />
+                                Pace
+                            </a>
                         </div>
                         <div className="mt-5">
                             <div className="px-3 text-[10px] font-medium text-gray-400 tracking-wider mb-1.5" style={{ textTransform: 'capitalize' }}>
@@ -97,10 +102,10 @@ const DashboardLayout = () => {
                             className="w-full flex items-center justify-between px-3 py-2.5 text-xs text-gray-700 hover:bg-gray-50"
                         >
                             <div className="flex items-center">
-                                <div className="w-5 h-5 bg-pink-200 rounded text-[10px] flex items-center justify-center text-pink-700 font-bold mr-2.5">
-                                    W
+                                <div className="w-5 h-5 bg-yellow-100 rounded text-[11px] flex items-center justify-center text-yellow-700 font-bold mr-2.5">
+                                    A
                                 </div>
-                                Wio
+                                AP Demo Org
                             </div>
                             <ChevronDown className={`w-3.5 h-3.5 text-gray-400 transition-transform ${isAirbnbOpen ? 'rotate-180' : ''}`} />
                         </button>
