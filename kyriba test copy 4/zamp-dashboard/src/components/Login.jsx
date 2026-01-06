@@ -9,6 +9,21 @@ const Login = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
+        // Check if user has a valid session
+        const session = localStorage.getItem('zampDashboardSession');
+        if (session) {
+            const { timestamp } = JSON.parse(session);
+            const tenMinutes = 10 * 60 * 1000; // 10 minutes in milliseconds
+            if (Date.now() - timestamp < tenMinutes) {
+                // Session is still valid, auto-navigate to dashboard
+                navigate('/done');
+                return;
+            } else {
+                // Session expired, remove it
+                localStorage.removeItem('zampDashboardSession');
+            }
+        }
+
         // Generate random animated lines
         const generateLines = () => {
             const newLines = [];
@@ -40,11 +55,16 @@ const Login = () => {
         const interval = setInterval(generateLines, 15000);
 
         return () => clearInterval(interval);
-    }, []);
+    }, [navigate]);
 
     const handleLogin = (e) => {
         e.preventDefault();
         if (email === 'user@zamp.ai' && password === 'demo123') {
+            // Save session to localStorage with current timestamp
+            localStorage.setItem('zampDashboardSession', JSON.stringify({
+                timestamp: Date.now(),
+                user: email
+            }));
             navigate('/done');
         } else {
             alert('Invalid credentials');
