@@ -1,0 +1,176 @@
+{
+    "id": "38",
+    "sections": {
+        "overview": {
+            "title": "Overview",
+            "content": "Process Overview"
+        },
+        "activityLogs": {
+            "title": "Activity Logs",
+            "items": [
+                {
+                    "title": "Wio Onboarding Application started",
+                    "status": "completed",
+                    "type": "success",
+                    "time": "09:05 AM"
+                },
+                {
+                    "title": "Identity verification complete",
+                    "status": "success",
+                    "type": "success",
+                    "time": "09:06 AM",
+                    "stepId": "identity-verification",
+                    "artifacts": [
+                        {
+                            "type": "image",
+                            "label": "Emirates ID Image",
+                            "icon": "image",
+                            "imagePath": "/data/uploads/Screenshot 2025-12-12 at 00.53.55.png",
+                            "id": "art-eid-1765789608993"
+                        },
+                        {
+                            "type": "table",
+                            "label": "Extracted Identity Data",
+                            "icon": "table",
+                            "data": {
+                                "Entered Name": "Zeeshan Yasin Muhammad Yasin",
+                                "Phone Number": "+971122343212",
+                                "Email Address": "zeeshan@trafco.com",
+                                "Extracted Name": "Zeeshan Yasin Muhammad Yasin",
+                                "ID Number": "784-1989-1593287-9",
+                                "Nationality": "Pakistan",
+                                "Date of Birth": "04/10/1989",
+                                "Expiry Date": "22/05/2023"
+                            },
+                            "id": "art-eid-data-1765789608993"
+                        }
+                    ]
+                },
+                {
+                    "title": "Eligibility Verified, Applicant has a Freelancer Permit",
+                    "status": "success",
+                    "type": "success",
+                    "time": "09:06 AM",
+                    "stepId": "eligibility-verification",
+                    "description": "User has a Freelancer Permit and is not in any restricted Industries"
+                },
+                {
+                    "title": "Document Verification Complete",
+                    "status": "success",
+                    "type": "success",
+                    "description": "Applicant is a Freelancer",
+                    "artifacts": [
+                        {
+                            "type": "image",
+                            "label": "Freelancer Permit",
+                            "icon": "image",
+                            "imagePath": "/data/uploads/freelance-AD-3-1 (1).jpg",
+                            "id": "art-fp-1765789625164"
+                        },
+                        {
+                            "type": "table",
+                            "label": "Extracted Permit Data",
+                            "icon": "table",
+                            "data": {
+                                "fullName": "MAINAK BISWAS",
+                                "permitNumber": null,
+                                "issuingAuthority": "Abu Dhabi Business Center",
+                                "activity": "Photography Services",
+                                "expiryDate": null
+                            },
+                            "id": "art-fp-data-1765789625164"
+                        }
+                    ],
+                    "time": "09:07 AM",
+                    "stepId": "freelancer-permit-verification"
+                },
+                {
+                    "title": "Authority verified, all necessary documents received",
+                    "status": "success",
+                    "type": "success",
+                    "time": "09:07 AM",
+                    "stepId": "authority-verification"
+                },
+                {
+                    "title": "Proof of Address Uploaded",
+                    "status": "success",
+                    "type": "success",
+                    "artifacts": [
+                        {
+                            "type": "file",
+                            "label": "Proof of Address",
+                            "icon": "file",
+                            "pdfPath": "/data/uploads/UTILITY BILL \u2014 PROOF OF ADDRESS (1).pdf",
+                            "id": "art-pa-1765789639040"
+                        }
+                    ],
+                    "time": "09:07 AM",
+                    "stepId": "auth-doc-pa"
+                }
+            ]
+        },
+        "keyDetails": {
+            "title": "Key Details",
+            "items": [
+                {
+                    "status": "processing"
+                }
+            ]
+        },
+        "sidebarArtifacts": {
+            "title": "Artifacts",
+            "items": [
+                {
+                    "type": "image",
+                    "label": "Emirates ID Image",
+                    "icon": "image",
+                    "imagePath": "/data/uploads/Screenshot 2025-12-12 at 00.53.55.png",
+                    "id": "art-eid-1765789608993"
+                },
+                {
+                    "type": "table",
+                    "label": "Extracted Identity Data",
+                    "icon": "table",
+                    "data": {
+                        "Entered Name": "Zeeshan Yasin Muhammad Yasin",
+                        "Phone Number": "+971122343212",
+                        "Email Address": "zeeshan@trafco.com",
+                        "Extracted Name": "Zeeshan Yasin Muhammad Yasin",
+                        "ID Number": "784-1989-1593287-9",
+                        "Nationality": "Pakistan",
+                        "Date of Birth": "04/10/1989",
+                        "Expiry Date": "22/05/2023"
+                    },
+                    "id": "art-eid-data-1765789608993"
+                },
+                {
+                    "type": "image",
+                    "label": "Freelancer Permit",
+                    "icon": "image",
+                    "imagePath": "/data/uploads/freelance-AD-3-1 (1).jpg",
+                    "id": "art-fp-1765789625164"
+                },
+                {
+                    "type": "table",
+                    "label": "Extracted Permit Data",
+                    "icon": "table",
+                    "data": {
+                        "fullName": "MAINAK BISWAS",
+                        "permitNumber": null,
+                        "issuingAuthority": "Abu Dhabi Business Center",
+                        "activity": "Photography Services",
+                        "expiryDate": null
+                    },
+                    "id": "art-fp-data-1765789625164"
+                },
+                {
+                    "type": "file",
+                    "label": "Proof of Address",
+                    "icon": "file",
+                    "pdfPath": "/data/uploads/UTILITY BILL \u2014 PROOF OF ADDRESS (1).pdf",
+                    "id": "art-pa-1765789639040"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,216 @@
+{
+    "id": "16",
+    "sections": {
+        "overview": {
+            "title": "Overview",
+            "content": "Process Overview"
+        },
+        "activityLogs": {
+            "title": "Activity Logs",
+            "items": [
+                {
+                    "title": "Wio Onboarding Application started",
+                    "status": "processing",
+                    "type": "success",
+                    "time": "01:39 AM"
+                },
+                {
+                    "title": "Identity verification complete",
+                    "status": "success",
+                    "type": "success",
+                    "time": "01:40 AM",
+                    "stepId": "identity-verification",
+                    "artifacts": [
+                        {
+                            "type": "image",
+                            "label": "Emirates ID Image",
+                            "icon": "image",
+                            "imagePath": "/data/uploads/Screenshot 2025-12-12 at 00.53.55.png",
+                            "id": "art-eid-1765483837481"
+                        },
+                        {
+                            "type": "table",
+                            "label": "Extracted Identity Data",
+                            "icon": "table",
+                            "data": {
+                                "Entered Name": "Zeeshan Yasin Muhammad Yasin",
+                                "Phone Number": "+971123421232",
+                                "Email Address": "zeeshan@gmail.com",
+                                "Extracted Name": "Zeeshan Yasin Muhammad Yasin",
+                                "ID Number": "784-1989-1593287-9",
+                                "Nationality": "Pakistan",
+                                "Date of Birth": "04/10/1989",
+                                "Expiry Date": "22/05/2023"
+                            },
+                            "id": "art-eid-data-1765483837481"
+                        }
+                    ]
+                },
+                {
+                    "title": "Eligibility Verified, Applicant has a Trade License",
+                    "status": "success",
+                    "type": "success",
+                    "time": "01:40 AM",
+                    "stepId": "eligibility-verification",
+                    "description": "User has a Trade License and is not in any restricted Industries"
+                },
+                {
+                    "title": "Document Verification Complete",
+                    "status": "success",
+                    "type": "success",
+                    "time": "01:41 AM",
+                    "stepId": "trade-license-verification",
+                    "description": "Applicant's Legal Type is Limited Liability Company - Single Owner(LLC - SO)",
+                    "artifacts": [
+                        {
+                            "type": "table",
+                            "label": "Verified License Data",
+                            "icon": "table",
+                            "id": "art-lic-ver-1765483862090",
+                            "data": {
+                                "Business Name": "GOLKAR GOODS WHOLESALERS CO. L.L.C",
+                                "License Number": "1234538",
+                                "Issuing Authority": "Department of Economy and Tourism - DET",
+                                "Legal Type": "Limited Liability Company - Single Owner(LLC - SO)",
+                                "Activities": [
+                                    "Goods Wholesalers"
+                                ],
+                                "Expiry Date": "2024-09-10",
+                                "video_path": "/Users/vigneshnarayanan/Desktop/pace-business-onboarding-copy-main/src/videos/7a7b3fa7-b2b3-4180-8dbe-f0862f006faa.webm",
+                                "public_video_path": "/data/uploads/license_check_AK2373_20251212_014102.webm"
+                            }
+                        },
+                        {
+                            "type": "video",
+                            "label": "Verification Recording",
+                            "icon": "video",
+                            "videoPath": "/data/uploads/license_check_AK2373_20251212_014102.webm",
+                            "id": "art-lic-vid-1765483862090"
+                        }
+                    ]
+                },
+                {
+                    "title": "Authority verified, all necessary documents received",
+                    "status": "success",
+                    "type": "success",
+                    "time": "01:42 AM",
+                    "stepId": "authority-verification"
+                },
+                {
+                    "title": "Common Authorization Documents",
+                    "status": "processing",
+                    "type": "info",
+                    "artifacts": [
+                        {
+                            "type": "file",
+                            "label": "Memorandum of Association",
+                            "icon": "file",
+                            "pdfPath": "/data/uploads/Memorandum.pdf",
+                            "id": "art-moa-1765483887481"
+                        },
+                        {
+                            "type": "table",
+                            "label": "Shareholders (MOA)",
+                            "icon": "table",
+                            "data": [
+                                {
+                                    "name": "Ahmed Mohammed Al Rashid",
+                                    "ownership": "38%"
+                                },
+                                {
+                                    "name": "Fatima Hassan Al Maktoum",
+                                    "ownership": "22%"
+                                },
+                                {
+                                    "name": "Zeeshan Yasin Muhammad Yasin",
+                                    "ownership": "15%"
+                                },
+                                {
+                                    "name": "Omar Khalid Al Suwaidi",
+                                    "ownership": "15%"
+                                },
+                                {
+                                    "name": "Lina Abdulrahman Al Shamsi",
+                                    "ownership": "10%"
+                                }
+                            ],
+                            "id": "art-moa-data-1765483887481"
+                        }
+                    ],
+                    "time": "01:41 AM",
+                    "stepId": "auth-doc-moa"
+                },
+                {
+                    "title": "Power of Attorney Uploaded",
+                    "status": "processing",
+                    "type": "info",
+                    "artifacts": [
+                        {
+                            "type": "file",
+                            "label": "Power of Attorney",
+                            "icon": "file",
+                            "pdfPath": "/data/uploads/Power of attorny.pdf",
+                            "id": "art-poa-1765483930316"
+                        },
+                        {
+                            "type": "table",
+                            "label": "Extracted POA Data",
+                            "icon": "table",
+                            "data": {
+                                "grantedBy": "Ahmed Mohammed Al Rashid",
+                                "grantedTo": "Zeeshan Yasin Muhammad Yasin",
+                                "scope": "Act on behalf of Al Thuraya Advanced Electronics Trading LLC for communicating with Wio Bank, completing onboarding, verification, and compliance procedures, providing corporate documents, signing and submitting forms, and representing the Company in matters related to banking facilities.",
+                                "dateIssued": null,
+                                "expiryDate": null,
+                                "notarized": false
+                            },
+                            "id": "art-poa-data-1765483930316"
+                        }
+                    ],
+                    "time": "01:42 AM",
+                    "stepId": "auth-doc-poa"
+                },
+                {
+                    "title": "Bank Mandate Uploaded",
+                    "status": "processing",
+                    "type": "info",
+                    "artifacts": [
+                        {
+                            "type": "file",
+                            "label": "Bank Mandate",
+                            "icon": "file",
+                            "pdfPath": "/data/uploads/Bank Mandate.pdf",
+                            "id": "art-bm-1765483962061"
+                        }
+                    ],
+                    "time": "01:42 AM",
+                    "stepId": "auth-doc-bm"
+                },
+                {
+                    "title": "Proof of Address Uploaded",
+                    "status": "processing",
+                    "type": "info",
+                    "artifacts": [
+                        {
+                            "type": "file",
+                            "label": "Proof of Address",
+                            "icon": "file",
+                            "pdfPath": "/data/uploads/UTILITY BILL \u2014 PROOF OF ADDRESS.pdf",
+                            "id": "art-pa-1765483970278"
+                        }
+                    ],
+                    "time": "01:42 AM",
+                    "stepId": "auth-doc-pa"
+                }
+            ]
+        },
+        "keyDetails": {
+            "title": "Key Details",
+            "items": [
+                {
+                    "status": "processing"
+                }
+            ]
+        }
+    }
+}

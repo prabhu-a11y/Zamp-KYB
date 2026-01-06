@@ -1,0 +1,320 @@
+{
+    "id": "37",
+    "sections": {
+        "overview": {
+            "title": "Overview",
+            "content": "Process Overview"
+        },
+        "activityLogs": {
+            "title": "Activity Logs",
+            "items": [
+                {
+                    "title": "Wio Onboarding Application started",
+                    "status": "completed",
+                    "type": "success",
+                    "time": "08:53 AM"
+                },
+                {
+                    "title": "Identity verification complete",
+                    "status": "success",
+                    "type": "success",
+                    "time": "08:54 AM",
+                    "stepId": "identity-verification",
+                    "artifacts": [
+                        {
+                            "type": "image",
+                            "label": "Emirates ID Image",
+                            "icon": "image",
+                            "imagePath": "/data/uploads/Screenshot 2025-12-12 at 00.53.55.png",
+                            "id": "art-eid-1765788856647"
+                        },
+                        {
+                            "type": "table",
+                            "label": "Extracted Identity Data",
+                            "icon": "table",
+                            "data": {
+                                "Entered Name": "Zeeshan Yasin Muhammad Yasin",
+                                "Phone Number": "+9711231221211",
+                                "Email Address": "a@f",
+                                "Extracted Name": "Zeeshan Yasin Muhammad Yasin",
+                                "ID Number": "784-1989-1593287-9",
+                                "Nationality": "Pakistan",
+                                "Date of Birth": "04/10/1989",
+                                "Expiry Date": "22/05/2023"
+                            },
+                            "id": "art-eid-data-1765788856647"
+                        }
+                    ]
+                },
+                {
+                    "title": "Eligibility Verified, Applicant has a Freelancer Permit",
+                    "status": "success",
+                    "type": "success",
+                    "time": "08:54 AM",
+                    "stepId": "eligibility-verification",
+                    "description": "User has a Freelancer Permit and is not in any restricted Industries"
+                },
+                {
+                    "title": "Document Verification Complete",
+                    "status": "success",
+                    "type": "success",
+                    "description": "Applicant is a Freelancer",
+                    "artifacts": [
+                        {
+                            "type": "image",
+                            "label": "Freelancer Permit",
+                            "icon": "image",
+                            "imagePath": "/data/uploads/freelance-AD-3-1 (1).jpg",
+                            "id": "art-fp-1765788879637"
+                        },
+                        {
+                            "type": "table",
+                            "label": "Extracted Permit Data",
+                            "icon": "table",
+                            "data": {
+                                "fullName": "MAINAK BISWAS",
+                                "permitNumber": null,
+                                "issuingAuthority": "DEPARTMENT OF ECONOMIC DEVELOPMENT",
+                                "activity": "Photography Services",
+                                "expiryDate": null
+                            },
+                            "id": "art-fp-data-1765788879637"
+                        }
+                    ],
+                    "time": "08:54 AM",
+                    "stepId": "freelancer-permit-verification"
+                },
+                {
+                    "title": "Authority Verification pending",
+                    "status": "processing",
+                    "type": "warning",
+                    "time": "08:54 AM"
+                },
+                {
+                    "title": "Proof of Address Uploaded",
+                    "status": "success",
+                    "type": "success",
+                    "artifacts": [
+                        {
+                            "type": "file",
+                            "label": "Proof of Address",
+                            "icon": "file",
+                            "pdfPath": "/data/uploads/UTILITY BILL \u2014 PROOF OF ADDRESS.pdf",
+                            "id": "art-pa-1765788892162"
+                        }
+                    ],
+                    "time": "08:54 AM",
+                    "stepId": "auth-doc-pa"
+                },
+                {
+                    "title": "Authority verified, all necessary documents received",
+                    "status": "success",
+                    "type": "success",
+                    "time": "08:54 AM",
+                    "stepId": "authority-verification"
+                },
+                {
+                    "title": "Business Verification Complete",
+                    "status": "completed",
+                    "type": "success",
+                    "artifacts": [
+                        {
+                            "type": "table",
+                            "label": "Website Verification Data",
+                            "icon": "table",
+                            "id": "art-web-data-1765789019870",
+                            "data": {
+                                "company_name": "",
+                                "address": "",
+                                "business_services": [],
+                                "countries_operating": [],
+                                "people": [],
+                                "video_path": "/Users/vigneshnarayanan/Desktop/pace-business-onboarding-copy-main/src/videos/6abf398aaef31e08e5def9edf21f1aa6.webm",
+                                "public_video_path": "/data/uploads/website_check_20251215_085622.webm"
+                            }
+                        },
+                        {
+                            "type": "video",
+                            "label": "Website Verification Recording",
+                            "icon": "video",
+                            "videoPath": "/data/uploads/website_check_20251215_085622.webm",
+                            "id": "art-web-video-1765789019870"
+                        },
+                        {
+                            "type": "table",
+                            "label": "LEI Verification Data",
+                            "icon": "table",
+                            "id": "art-lei-data-1765789019870",
+                            "data": {
+                                "LEGAL NAME": "TRAFCO DMCC",
+                                "TRAFCO DMCC": "Registered At",
+                                "LEGAL ADDRESS": "Office No. 303, Fortune Tower",
+                                "COUNTRY": "Not Found",
+                                "JURISDICTION": "Not Found",
+                                "ULTIMATE PARENT": "Not Found",
+                                "LEI CODE": "Not Found",
+                                "LEI STATUS": "Not Found",
+                                "ENTITY CATEGORY": "Not Found",
+                                "video_path": "/Users/vigneshnarayanan/Desktop/pace-business-onboarding-copy-main/src/videos/433d1f72-efde-47db-8564-76089cde07b6.webm",
+                                "public_video_path": "/data/uploads/lei_check_98450098PEAE6654A804_20251215_085642.webm"
+                            }
+                        },
+                        {
+                            "type": "video",
+                            "label": "LEI Verification Recording",
+                            "icon": "video",
+                            "videoPath": "/data/uploads/lei_check_98450098PEAE6654A804_20251215_085642.webm",
+                            "id": "art-lei-video-1765789019870"
+                        },
+                        {
+                            "type": "table",
+                            "label": "Business Verification Summary",
+                            "icon": "table",
+                            "id": "art-bus-summary-1765789019870",
+                            "data": {
+                                "Business Address": "H\u00f4tel Richemond, 8, Rue Adh\u00e9mar-Fabri, Les P\u00e2quis, P\u00e2quis, Geneva, 1201, Switzerland",
+                                "LEI Code": "98450098PEAE6654A804",
+                                "Website URL": "https://www.trafcodmcc.com/",
+                                "Address Source": "Manual"
+                            }
+                        }
+                    ],
+                    "time": "08:56 AM",
+                    "stepId": "business-verification-complete"
+                }
+            ]
+        },
+        "keyDetails": {
+            "title": "Key Details",
+            "items": [
+                {
+                    "status": "processing"
+                },
+                {
+                    "Online Presence": "Yes",
+                    "Website URL": "https://www.trafcodmcc.com/",
+                    "International Operations": "No",
+                    "Operating Countries": "None",
+                    "Business Address": "H\u00f4tel Richemond, 8, Rue Adh\u00e9mar-Fabri, Les P\u00e2quis, P\u00e2quis, Geneva, 1201, Switzerland",
+                    "Address Source": "Manual",
+                    "LEI Code": "98450098PEAE6654A804"
+                }
+            ]
+        },
+        "sidebarArtifacts": {
+            "title": "Artifacts",
+            "items": [
+                {
+                    "type": "image",
+                    "label": "Emirates ID Image",
+                    "icon": "image",
+                    "imagePath": "/data/uploads/Screenshot 2025-12-12 at 00.53.55.png",
+                    "id": "art-eid-1765788856647"
+                },
+                {
+                    "type": "table",
+                    "label": "Extracted Identity Data",
+                    "icon": "table",
+                    "data": {
+                        "Entered Name": "Zeeshan Yasin Muhammad Yasin",
+                        "Phone Number": "+9711231221211",
+                        "Email Address": "a@f",
+                        "Extracted Name": "Zeeshan Yasin Muhammad Yasin",
+                        "ID Number": "784-1989-1593287-9",
+                        "Nationality": "Pakistan",
+                        "Date of Birth": "04/10/1989",
+                        "Expiry Date": "22/05/2023"
+                    },
+                    "id": "art-eid-data-1765788856647"
+                },
+                {
+                    "type": "image",
+                    "label": "Freelancer Permit",
+                    "icon": "image",
+                    "imagePath": "/data/uploads/freelance-AD-3-1 (1).jpg",
+                    "id": "art-fp-1765788879637"
+                },
+                {
+                    "type": "table",
+                    "label": "Extracted Permit Data",
+                    "icon": "table",
+                    "data": {
+                        "fullName": "MAINAK BISWAS",
+                        "permitNumber": null,
+                        "issuingAuthority": "DEPARTMENT OF ECONOMIC DEVELOPMENT",
+                        "activity": "Photography Services",
+                        "expiryDate": null
+                    },
+                    "id": "art-fp-data-1765788879637"
+                },
+                {
+                    "type": "file",
+                    "label": "Proof of Address",
+                    "icon": "file",
+                    "pdfPath": "/data/uploads/UTILITY BILL \u2014 PROOF OF ADDRESS.pdf",
+                    "id": "art-pa-1765788892162"
+                },
+                {
+                    "type": "table",
+                    "label": "Website Verification Data",
+                    "icon": "table",
+                    "id": "art-web-data-1765789019870",
+                    "data": {
+                        "company_name": "",
+                        "address": "",
+                        "business_services": [],
+                        "countries_operating": [],
+                        "people": [],
+                        "video_path": "/Users/vigneshnarayanan/Desktop/pace-business-onboarding-copy-main/src/videos/6abf398aaef31e08e5def9edf21f1aa6.webm",
+                        "public_video_path": "/data/uploads/website_check_20251215_085622.webm"
+                    }
+                },
+                {
+                    "type": "video",
+                    "label": "Website Verification Recording",
+                    "icon": "video",
+                    "videoPath": "/data/uploads/website_check_20251215_085622.webm",
+                    "id": "art-web-video-1765789019870"
+                },
+                {
+                    "type": "table",
+                    "label": "LEI Verification Data",
+                    "icon": "table",
+                    "id": "art-lei-data-1765789019870",
+                    "data": {
+                        "LEGAL NAME": "TRAFCO DMCC",
+                        "TRAFCO DMCC": "Registered At",
+                        "LEGAL ADDRESS": "Office No. 303, Fortune Tower",
+                        "COUNTRY": "Not Found",
+                        "JURISDICTION": "Not Found",
+                        "ULTIMATE PARENT": "Not Found",
+                        "LEI CODE": "Not Found",
+                        "LEI STATUS": "Not Found",
+                        "ENTITY CATEGORY": "Not Found",
+                        "video_path": "/Users/vigneshnarayanan/Desktop/pace-business-onboarding-copy-main/src/videos/433d1f72-efde-47db-8564-76089cde07b6.webm",
+                        "public_video_path": "/data/uploads/lei_check_98450098PEAE6654A804_20251215_085642.webm"
+                    }
+                },
+                {
+                    "type": "video",
+                    "label": "LEI Verification Recording",
+                    "icon": "video",
+                    "videoPath": "/data/uploads/lei_check_98450098PEAE6654A804_20251215_085642.webm",
+                    "id": "art-lei-video-1765789019870"
+                },
+                {
+                    "type": "table",
+                    "label": "Business Verification Summary",
+                    "icon": "table",
+                    "id": "art-bus-summary-1765789019870",
+                    "data": {
+                        "Business Address": "H\u00f4tel Richemond, 8, Rue Adh\u00e9mar-Fabri, Les P\u00e2quis, P\u00e2quis, Geneva, 1201, Switzerland",
+                        "LEI Code": "98450098PEAE6654A804",
+                        "Website URL": "https://www.trafcodmcc.com/",
+                        "Address Source": "Manual"
+                    }
+                }
+            ]
+        }
+    }
+}

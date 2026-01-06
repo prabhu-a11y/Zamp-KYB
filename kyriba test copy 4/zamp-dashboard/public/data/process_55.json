@@ -1,0 +1,268 @@
+{
+    "id": "55",
+    "sections": {
+        "overview": {
+            "title": "Overview",
+            "content": "Process Overview"
+        },
+        "activityLogs": {
+            "title": "Activity Logs",
+            "items": [
+                {
+                    "title": "Wio Onboarding Application started",
+                    "status": "completed",
+                    "type": "success",
+                    "time": "12:06 PM"
+                },
+                {
+                    "title": "Identity Verification in Progress",
+                    "status": "processing",
+                    "type": "info",
+                    "time": "12:06 PM",
+                    "stepId": "identity-verification"
+                },
+                {
+                    "title": "User Provided Full Name",
+                    "status": "processing",
+                    "type": "info",
+                    "description": "Zeeshan Yasin Muhammad Yasin",
+                    "time": "12:06 PM"
+                },
+                {
+                    "title": "User Provided Email",
+                    "status": "processing",
+                    "type": "info",
+                    "description": "zeeshan1@gmail.com",
+                    "time": "12:06 PM"
+                },
+                {
+                    "title": "User Provided Phone",
+                    "status": "processing",
+                    "type": "info",
+                    "description": "+9710511220221",
+                    "time": "12:07 PM"
+                },
+                {
+                    "title": "Eligibility Verified, Applicant has a Trade License",
+                    "status": "success",
+                    "type": "success",
+                    "time": "12:07 PM",
+                    "stepId": "eligibility-verification",
+                    "description": "User has a Trade License and is not in any restricted Industries"
+                },
+                {
+                    "title": "Document Verification Complete",
+                    "status": "success",
+                    "type": "success",
+                    "description": "Details extracted and verified from the source site",
+                    "artifacts": [
+                        {
+                            "type": "image",
+                            "label": "Unified License",
+                            "icon": "image",
+                            "imagePath": "/data/uploads/document.pdf",
+                            "id": "art-tl-1765867061763"
+                        },
+                        {
+                            "type": "table",
+                            "label": "Extracted Data",
+                            "icon": "table",
+                            "data": {
+                                "businessName": "TRAFCO DMCC",
+                                "licenseNumber": "DMCC-912545",
+                                "issuingAuthority": "Dubai Multi Commodities Centre Authority - DMCCA",
+                                "legalType": "llc",
+                                "activities": "Ship Charter",
+                                "expiryDate": "2024-12-28"
+                            },
+                            "id": "art-tl-data-1765867061763"
+                        }
+                    ],
+                    "time": "12:07 PM",
+                    "stepId": "trade-license-verification"
+                },
+                {
+                    "title": "Authority Verification pending",
+                    "status": "processing",
+                    "type": "warning",
+                    "time": "12:07 PM",
+                    "stepId": "authority-verification"
+                },
+                {
+                    "title": "Common Authorization Documents",
+                    "status": "success",
+                    "type": "success",
+                    "artifacts": [
+                        {
+                            "type": "file",
+                            "label": "Memorandum of Association",
+                            "icon": "file",
+                            "pdfPath": "/data/uploads/Memorandum (1).pdf",
+                            "id": "art-moa-1765867181571"
+                        },
+                        {
+                            "type": "table",
+                            "label": "Shareholders (MOA)",
+                            "icon": "table",
+                            "data": [
+                                {
+                                    "name": "Badar Tariq",
+                                    "nationality": "UAE",
+                                    "ownership": "45%"
+                                },
+                                {
+                                    "name": "Ahmed Mohammed Al Rashid",
+                                    "nationality": "UAE",
+                                    "ownership": "25%"
+                                },
+                                {
+                                    "name": "Fatima Hassan Al Maktoum",
+                                    "nationality": "Pakistan",
+                                    "ownership": "15%"
+                                },
+                                {
+                                    "name": "Omar Khalid Al Suwaidi",
+                                    "nationality": "UAE",
+                                    "ownership": "10%"
+                                },
+                                {
+                                    "name": "Lina Abdulrahman Al Shamsi",
+                                    "nationality": "Egypt",
+                                    "ownership": "5%"
+                                }
+                            ],
+                            "id": "art-moa-data-1765867181571"
+                        }
+                    ],
+                    "time": "12:09 PM",
+                    "stepId": "auth-doc-moa"
+                },
+                {
+                    "title": "Power of Attorney Uploaded",
+                    "status": "success",
+                    "type": "success",
+                    "artifacts": [
+                        {
+                            "type": "file",
+                            "label": "Power of Attorney",
+                            "icon": "file",
+                            "pdfPath": "/data/uploads/Power of attorny (1).pdf",
+                            "id": "art-poa-1765867212343"
+                        },
+                        {
+                            "type": "table",
+                            "label": "Extracted POA Data",
+                            "icon": "table",
+                            "data": {
+                                "grantedBy": "Badar Tariq",
+                                "grantedTo": "Zeeshan Yasin Muhammad Yasin",
+                                "scope": "Representing Trafco DMCC in all matters relating to opening and maintaining banking facilities with Wio Bank, including communicating with Wio Bank, completing onboarding and compliance procedures, providing corporate documents, and signing/submitting required forms.",
+                                "dateIssued": null,
+                                "expiryDate": null,
+                                "notarized": false
+                            },
+                            "id": "art-poa-data-1765867212343"
+                        }
+                    ],
+                    "time": "12:10 PM",
+                    "stepId": "auth-doc-poa"
+                }
+            ]
+        },
+        "keyDetails": {
+            "title": "Key Details",
+            "items": [
+                {
+                    "status": "processing"
+                }
+            ]
+        },
+        "sidebarArtifacts": {
+            "title": "Artifacts",
+            "items": [
+                {
+                    "type": "image",
+                    "label": "Unified License",
+                    "icon": "image",
+                    "imagePath": "/data/uploads/document.pdf",
+                    "id": "art-tl-1765867061763"
+                },
+                {
+                    "type": "table",
+                    "label": "Extracted Data",
+                    "icon": "table",
+                    "data": {
+                        "businessName": "TRAFCO DMCC",
+                        "licenseNumber": "DMCC-912545",
+                        "issuingAuthority": "Dubai Multi Commodities Centre Authority - DMCCA",
+                        "legalType": "llc",
+                        "activities": "Ship Charter",
+                        "expiryDate": "2024-12-28"
+                    },
+                    "id": "art-tl-data-1765867061763"
+                },
+                {
+                    "type": "file",
+                    "label": "Memorandum of Association",
+                    "icon": "file",
+                    "pdfPath": "/data/uploads/Memorandum (1).pdf",
+                    "id": "art-moa-1765867181571"
+                },
+                {
+                    "type": "table",
+                    "label": "Shareholders (MOA)",
+                    "icon": "table",
+                    "data": [
+                        {
+                            "name": "Badar Tariq",
+                            "nationality": "UAE",
+                            "ownership": "45%"
+                        },
+                        {
+                            "name": "Ahmed Mohammed Al Rashid",
+                            "nationality": "UAE",
+                            "ownership": "25%"
+                        },
+                        {
+                            "name": "Fatima Hassan Al Maktoum",
+                            "nationality": "Pakistan",
+                            "ownership": "15%"
+                        },
+                        {
+                            "name": "Omar Khalid Al Suwaidi",
+                            "nationality": "UAE",
+                            "ownership": "10%"
+                        },
+                        {
+                            "name": "Lina Abdulrahman Al Shamsi",
+                            "nationality": "Egypt",
+                            "ownership": "5%"
+                        }
+                    ],
+                    "id": "art-moa-data-1765867181571"
+                },
+                {
+                    "type": "file",
+                    "label": "Power of Attorney",
+                    "icon": "file",
+                    "pdfPath": "/data/uploads/Power of attorny (1).pdf",
+                    "id": "art-poa-1765867212343"
+                },
+                {
+                    "type": "table",
+                    "label": "Extracted POA Data",
+                    "icon": "table",
+                    "data": {
+                        "grantedBy": "Badar Tariq",
+                        "grantedTo": "Zeeshan Yasin Muhammad Yasin",
+                        "scope": "Representing Trafco DMCC in all matters relating to opening and maintaining banking facilities with Wio Bank, including communicating with Wio Bank, completing onboarding and compliance procedures, providing corporate documents, and signing/submitting required forms.",
+                        "dateIssued": null,
+                        "expiryDate": null,
+                        "notarized": false
+                    },
+                    "id": "art-poa-data-1765867212343"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,132 @@
+{
+    "id": "10",
+    "sections": {
+        "overview": {
+            "title": "Overview",
+            "content": "Process Overview"
+        },
+        "activityLogs": {
+            "title": "Activity Logs",
+            "items": [
+                {
+                    "title": "Wio Onboarding Application started",
+                    "status": "processing",
+                    "type": "success",
+                    "time": "12:10 PM"
+                },
+                {
+                    "title": "Identity verification complete",
+                    "status": "success",
+                    "type": "success",
+                    "time": "12:14 PM",
+                    "stepId": "identity-verification",
+                    "artifacts": [
+                        {
+                            "type": "image",
+                            "label": "Emirates ID Image",
+                            "icon": "image",
+                            "imagePath": "/data/uploads/67766281ba687b8fcec33823_Emirates ID Explained.jpg",
+                            "id": "art-eid-1765262658633"
+                        },
+                        {
+                            "type": "table",
+                            "label": "Extracted Identity Data",
+                            "icon": "table",
+                            "data": {
+                                "Full Name": "Hammad Salem Naser",
+                                "ID Number": "784-1234-1234567-1",
+                                "Nationality": "United Arab Emirates"
+                            },
+                            "id": "art-eid-data-1765262658633"
+                        }
+                    ]
+                },
+                {
+                    "title": "Eligibility Verified",
+                    "status": "success",
+                    "type": "success",
+                    "time": "12:14 PM",
+                    "stepId": "eligibility-verification",
+                    "description": "Business is not in a restricted industry"
+                },
+                {
+                    "title": "Document Verification Complete",
+                    "status": "success",
+                    "type": "success",
+                    "time": "12:14 PM",
+                    "stepId": "trade-license-verification",
+                    "description": "Applicant's Legal Type is Limited Liability Company - Single Owner(LLC - SO)",
+                    "artifacts": [
+                        {
+                            "type": "table",
+                            "label": "Verified License Data",
+                            "icon": "table",
+                            "id": "art-lic-ver-1765262686673",
+                            "data": {
+                                "Business Name": "GOLKAR GOODS WHOLESALERS CO. L.L.C",
+                                "License Number": "1234538",
+                                "Issuing Authority": "Department of Economy and Tourism - DET",
+                                "Legal Type": "Limited Liability Company - Single Owner(LLC - SO)",
+                                "Activities": [
+                                    "Goods Wholesalers"
+                                ],
+                                "Expiry Date": "2024-09-10",
+                                "video_path": "/Users/vigneshnarayanan/Desktop/pace-business-onboarding-copy-main/src/videos/06fb94ef-5c0a-4042-92f1-2f404c7658a5.webm",
+                                "public_video_path": "/data/uploads/license_check_AK2373_20251209_121446.webm"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "title": "Authority Verification pending",
+                    "status": "processing",
+                    "type": "warning",
+                    "time": "12:14 PM"
+                },
+                {
+                    "title": "Financial Profiling complete",
+                    "status": "success",
+                    "type": "success",
+                    "artifacts": [
+                        {
+                            "type": "table",
+                            "label": "Financial Profile",
+                            "icon": "table",
+                            "id": "art-fin-1765262795837",
+                            "data": {
+                                "Annual Turnover": "Less than AED 100,000",
+                                "Monthly Deposits": "AED 50,000 - 100,000",
+                                "Cash Deposits": "24%",
+                                "Cash Withdrawals": "22%"
+                            }
+                        }
+                    ],
+                    "time": "12:16 PM"
+                },
+                {
+                    "title": "Review pending",
+                    "status": "processing",
+                    "type": "warning",
+                    "time": "12:16 PM"
+                },
+                {
+                    "title": "Review complete. Application submitted successfully with reference number REF-2025-WIO785",
+                    "status": "success",
+                    "type": "success",
+                    "time": "12:16 PM"
+                }
+            ]
+        },
+        "keyDetails": {
+            "title": "Key Details",
+            "items": [
+                {
+                    "status": "processing"
+                },
+                {
+                    "status": "Done"
+                }
+            ]
+        }
+    }
+}

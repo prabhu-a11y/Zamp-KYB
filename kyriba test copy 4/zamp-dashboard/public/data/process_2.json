@@ -1,0 +1,25 @@
+{
+    "logs": [
+        {
+            "title": "Wio Onboarding Application started",
+            "status": "processing",
+            "type": "success",
+            "id": "log_0_1765257951.561612",
+            "time": "10:55 AM"
+        },
+        {
+            "title": "Identity Verification in Progress",
+            "status": "processing",
+            "type": "info",
+            "id": "log_1_1765257951.566191",
+            "time": "10:55 AM"
+        }
+    ],
+    "keyDetails": {
+        "processName": "Wio Onboarding Application",
+        "team": "Wio Applicant",
+        "processingDate": "2025-12-09",
+        "status": "processing"
+    },
+    "sidebarArtifacts": []
+}

@@ -1,0 +1,97 @@
+{
+    "id": "13",
+    "sections": {
+        "overview": {
+            "title": "Overview",
+            "content": "Process Overview"
+        },
+        "activityLogs": {
+            "title": "Activity Logs",
+            "items": [
+                {
+                    "title": "Wio Onboarding Application started",
+                    "status": "processing",
+                    "type": "success",
+                    "time": "12:52 AM"
+                },
+                {
+                    "title": "Identity verification complete",
+                    "status": "success",
+                    "type": "success",
+                    "time": "12:54 AM",
+                    "stepId": "identity-verification",
+                    "artifacts": [
+                        {
+                            "type": "image",
+                            "label": "Emirates ID Image",
+                            "icon": "image",
+                            "imagePath": "/data/uploads/Screenshot 2025-12-12 at 00.53.55.png",
+                            "id": "art-eid-1765481070871"
+                        },
+                        {
+                            "type": "table",
+                            "label": "Extracted Identity Data",
+                            "icon": "table",
+                            "data": {
+                                "Full Name": "Zeeshan Yasin Muhammad Yasin",
+                                "ID Number": "784-1989-1593287-9",
+                                "Nationality": "Pakistan"
+                            },
+                            "id": "art-eid-data-1765481070871"
+                        }
+                    ]
+                },
+                {
+                    "title": "Eligibility Verified",
+                    "status": "success",
+                    "type": "success",
+                    "time": "12:56 AM",
+                    "stepId": "eligibility-verification",
+                    "description": "Business is not in a restricted industry"
+                },
+                {
+                    "title": "Document Verification Complete",
+                    "status": "success",
+                    "type": "success",
+                    "time": "12:56 AM",
+                    "stepId": "trade-license-verification",
+                    "description": "Applicant's Legal Type is Limited Liability Company - Single Owner(LLC - SO)",
+                    "artifacts": [
+                        {
+                            "type": "table",
+                            "label": "Verified License Data",
+                            "icon": "table",
+                            "id": "art-lic-ver-1765481212265",
+                            "data": {
+                                "Business Name": "GOLKAR GOODS WHOLESALERS CO. L.L.C",
+                                "License Number": "1234538",
+                                "Issuing Authority": "Department of Economy and Tourism - DET",
+                                "Legal Type": "Limited Liability Company - Single Owner(LLC - SO)",
+                                "Activities": [
+                                    "Goods Wholesalers"
+                                ],
+                                "Expiry Date": "2024-09-10",
+                                "video_path": "/Users/vigneshnarayanan/Desktop/pace-business-onboarding-copy-main/src/videos/bc969285-fd21-4e98-9a13-bec13e81abf1.webm",
+                                "public_video_path": "/data/uploads/license_check_AK2373_20251212_005652.webm"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "title": "Authority Verification pending",
+                    "status": "processing",
+                    "type": "warning",
+                    "time": "12:56 AM"
+                }
+            ]
+        },
+        "keyDetails": {
+            "title": "Key Details",
+            "items": [
+                {
+                    "status": "processing"
+                }
+            ]
+        }
+    }
+}

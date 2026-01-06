@@ -1,0 +1,85 @@
+MIGRATION GUIDE: LOCAL AUTOMATION -> VERCEL + FIREBASE + CLOUDINARY
+
+OBJECTIVE:
+Run the automation script locally on your machine, but have the results update instantly on a public Vercel website.
+
+---
+
+PHASE 1: CLOUD INFRASTRUCTURE SETUP
+
+1.  **Set up Firebase (The Real-time Database)**
+    *   Go to console.firebase.google.com and create a new project.
+    *   Navigate to "Firestore Database" and click "Create Database".
+    *   Start in "Test Mode" (for development ease).
+    *   Go to Project Settings > Service Accounts.
+    *   Generate a new Private Key. This will download a `.json` file.
+    *   **IMPORTANT:** Save this file securely on your local machine. This is the key that allows your local script to write to the DB.
+
+2.  **Set up Cloudinary (The Media Storage)**
+    *   Create a free account at cloudinary.com.
+    *   Go to the Dashboard and copy your `Cloud Name`, `API Key`, and `API Secret`.
+
+---
+
+PHASE 2: MODIFY THE LOCAL SCRIPT (`run_kyriba_workflow.js`)
+
+1.  **Install Dependencies**
+    *   Run: `npm install firebase-admin cloudinary`
+
+2.  **Initialize SDKs**
+    *   Import `firebase-admin` and initialize it using the service account JSON file you downloaded.
+    *   Import `cloudinary` and configure it with your API keys.
+
+3.  **Replace Data Logic (JSON -> Firestore)**
+    *   Instead of reading `processes.json`, query the `processes` collection in Firestore.
+    *   Instead of `writeJson` to `process_N.json`, use `db.collection('processes').doc(id).set(data)`.
+    *   For logs: Instead of pushing to a local array and rewriting the file, use `db.collection('processes').doc(id).update({ logs: FieldValue.arrayUnion(newLog) })`.
+
+4.  **Replace File Logic (Local -> Cloudinary)**
+    *   **Videos:** After Playwright finishes recording, instead of just renaming the file, upload it:
+        `const result = await cloudinary.uploader.upload(videoPath, { resource_type: "video" });`
+    *   **PDFs:** After downloading the PDF, upload it:
+        `const result = await cloudinary.uploader.upload(pdfPath, { resource_type: "auto" });`
+    *   **Save URL:** The upload result gives you a `secure_url`. Save *this* URL into your Firestore log entry instead of the local path (`/videos/...`).
+
+---
+
+PHASE 3: MODIFY THE FRONTEND (`zamp-dashboard`)
+
+1.  **Install Dependencies**
+    *   Run: `npm install firebase`
+
+2.  **Initialize Firebase Client**
+    *   Create a `firebase.js` file with your public Firebase config (API Key, Project ID, etc.).
+
+3.  **Update `ProcessList.jsx`**
+    *   Remove the import of `processes.json`.
+    *   Use `useEffect` to set up a Firestore **Real-time Listener** (`onSnapshot`) on the `processes` collection.
+    *   This ensures that whenever the local script adds a new process, the list updates *instantly* without refreshing.
+
+4.  **Update `ProcessDetails.jsx`**
+    *   Remove the `fetch` call to the local JSON file.
+    *   Use `onSnapshot` to listen to the specific document `processes/{id}`.
+    *   This ensures logs appear one-by-one as they happen.
+
+---
+
+PHASE 4: DEPLOYMENT
+
+1.  **Push to GitHub**
+    *   Commit your frontend code (React app) to GitHub.
+
+2.  **Deploy to Vercel**
+    *   Import the repo into Vercel.
+    *   The build command is standard (`npm run build`).
+    *   Your site is now live (e.g., `zamp-dashboard.vercel.app`).
+
+---
+
+THE FINAL WORKFLOW:
+
+1.  You open your terminal and run `node run_kyriba_workflow.js`.
+2.  The script creates a document in Firestore -> **Vercel site shows "In Progress" item instantly.**
+3.  The script logs into Kyriba and updates Firestore -> **Vercel site shows "Logging in..." log instantly.**
+4.  The script records video, uploads to Cloudinary, saves URL to Firestore -> **Vercel site shows "View Video" button.**
+5.  You (or anyone) can watch the progress live from anywhere.

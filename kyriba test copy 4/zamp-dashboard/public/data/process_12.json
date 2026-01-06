@@ -1,0 +1,131 @@
+{
+    "id": "12",
+    "sections": {
+        "overview": {
+            "title": "Overview",
+            "content": "Process Overview"
+        },
+        "activityLogs": {
+            "title": "Activity Logs",
+            "items": [
+                {
+                    "title": "Wio Onboarding Application started",
+                    "status": "processing",
+                    "type": "success",
+                    "time": "05:40 PM"
+                },
+                {
+                    "title": "Identity verification complete",
+                    "status": "success",
+                    "type": "success",
+                    "time": "05:41 PM",
+                    "stepId": "identity-verification",
+                    "artifacts": [
+                        {
+                            "type": "image",
+                            "label": "Emirates ID Image",
+                            "icon": "image",
+                            "imagePath": "/data/uploads/67766281ba687b8fcec33823_Emirates ID Explained.jpg",
+                            "id": "art-eid-1765455089942"
+                        },
+                        {
+                            "type": "table",
+                            "label": "Extracted Identity Data",
+                            "icon": "table",
+                            "data": {
+                                "Full Name": "Hammad Salem Naser",
+                                "ID Number": "784-1234-1234567-1",
+                                "Nationality": "United Arab Emirates"
+                            },
+                            "id": "art-eid-data-1765455089942"
+                        }
+                    ]
+                },
+                {
+                    "title": "Eligibility Verified",
+                    "status": "success",
+                    "type": "success",
+                    "time": "05:41 PM",
+                    "stepId": "eligibility-verification",
+                    "description": "Business is not in a restricted industry"
+                },
+                {
+                    "title": "Document Verification Complete",
+                    "status": "success",
+                    "type": "success",
+                    "description": "Applicant's Legal Type is Limited Liability Company(LLC)",
+                    "artifacts": [
+                        {
+                            "type": "image",
+                            "label": "Unified License",
+                            "icon": "image",
+                            "imagePath": "/data/uploads/TRADE-LISENSE1-2-1.jpg",
+                            "id": "art-tl-1765455113797"
+                        },
+                        {
+                            "type": "table",
+                            "label": "Extracted Data",
+                            "icon": "table",
+                            "data": {
+                                "businessName": "PRESTIGE CONSTRUCTIONS L.L.C",
+                                "licenseNumber": "627578",
+                                "issuingAuthority": "GOVERNMENT OF DUBAI",
+                                "legalType": "Limited Liability Company(LLC)",
+                                "activities": [
+                                    "Steel Constructions Contracting",
+                                    "Building Contracting",
+                                    "\u0645\u0642\u0627\u0648\u0644\u0627\u062a \u062a\u0634\u064a\u064a\u062f \u0627\u0644\u0627\u0646\u0634\u0627\u0621\u0627\u062a \u0627\u0644\u0645\u0639\u062f\u0646\u064a\u0629",
+                                    "\u0645\u0642\u0627\u0648\u0644\u0627\u062a \u0627\u0644\u0628\u0646\u0627\u0621"
+                                ],
+                                "expiryDate": "2020-07-26"
+                            },
+                            "id": "art-tl-data-1765455113797"
+                        }
+                    ],
+                    "time": "05:41 PM",
+                    "stepId": "trade-license-verification"
+                },
+                {
+                    "title": "Authority Verification pending",
+                    "status": "processing",
+                    "type": "warning",
+                    "time": "05:41 PM"
+                },
+                {
+                    "title": "Business Verification complete",
+                    "status": "success",
+                    "type": "success",
+                    "artifacts": [
+                        {
+                            "type": "table",
+                            "label": "Business Details",
+                            "icon": "table",
+                            "id": "art-biz-1765455191845",
+                            "data": {
+                                "Online Presence": "No",
+                                "Website": "N/A",
+                                "International Ops": "No",
+                                "UAE Address": "None"
+                            }
+                        }
+                    ],
+                    "time": "05:43 PM"
+                },
+                {
+                    "title": "Financial Profiling in Progress",
+                    "status": "processing",
+                    "type": "info",
+                    "time": "05:43 PM"
+                }
+            ]
+        },
+        "keyDetails": {
+            "title": "Key Details",
+            "items": [
+                {
+                    "status": "processing"
+                }
+            ]
+        }
+    }
+}

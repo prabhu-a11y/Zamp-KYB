@@ -1,0 +1,295 @@
+{
+    "id": "46",
+    "sections": {
+        "overview": {
+            "title": "Overview",
+            "content": "Process Overview"
+        },
+        "activityLogs": {
+            "title": "Activity Logs",
+            "items": [
+                {
+                    "title": "Wio Onboarding Application started",
+                    "status": "completed",
+                    "type": "success",
+                    "time": "11:42 PM"
+                },
+                {
+                    "title": "Identity verification complete",
+                    "status": "success",
+                    "type": "success",
+                    "time": "11:53 PM",
+                    "stepId": "identity-verification",
+                    "artifacts": [
+                        {
+                            "type": "image",
+                            "label": "Emirates ID Image",
+                            "icon": "image",
+                            "imagePath": "/data/uploads/Screenshot 2025-12-12 at 00.53.55.png",
+                            "id": "art-eid-1765823000934"
+                        },
+                        {
+                            "type": "table",
+                            "label": "Extracted Identity Data",
+                            "icon": "table",
+                            "data": {
+                                "Entered Name": "Zeeshan Yasin Muhammad Yasin",
+                                "Phone Number": "+97112334475456",
+                                "Email Address": "prabhu@zamp.ai",
+                                "Extracted Name": "Zeeshan Yasin Muhammad Yasin",
+                                "ID Number": "784-1989-1593287-9",
+                                "Nationality": "Pakistan",
+                                "Date of Birth": "04/10/1989",
+                                "Expiry Date": "22/05/2023"
+                            },
+                            "id": "art-eid-data-1765823000934"
+                        }
+                    ]
+                },
+                {
+                    "title": "Eligibility Verified, Applicant has a Trade License",
+                    "status": "success",
+                    "type": "success",
+                    "time": "11:53 PM",
+                    "stepId": "eligibility-verification",
+                    "description": "User has a Trade License and is not in any restricted Industries"
+                },
+                {
+                    "title": "License Verification in Progress",
+                    "status": "processing",
+                    "type": "info",
+                    "time": "11:57 PM",
+                    "stepId": "trade-license-verification"
+                },
+                {
+                    "title": "Proof of Address Uploaded",
+                    "status": "success",
+                    "type": "success",
+                    "artifacts": [
+                        {
+                            "type": "file",
+                            "label": "Proof of Address",
+                            "icon": "file",
+                            "pdfPath": "/data/uploads/UTILITY BILL \u2014 PROOF OF ADDRESS (1).pdf",
+                            "id": "art-pa-1765823327950"
+                        }
+                    ],
+                    "time": "11:58 PM",
+                    "stepId": "auth-doc-pa"
+                },
+                {
+                    "title": "Authority verified, all necessary documents received",
+                    "status": "success",
+                    "type": "success",
+                    "time": "11:58 PM",
+                    "stepId": "authority-verification"
+                },
+                {
+                    "title": "Business Verification Complete",
+                    "status": "completed",
+                    "type": "success",
+                    "artifacts": [
+                        {
+                            "type": "table",
+                            "label": "LEI Verification Data",
+                            "icon": "table",
+                            "id": "art-lei-data-1765823578749",
+                            "data": {
+                                "LEGAL NAME": "TRAFCO DMCC",
+                                "TRAFCO DMCC": "Registered At",
+                                "LEGAL ADDRESS": "Office No. 303, Fortune Tower",
+                                "COUNTRY": "United Arab Emirates",
+                                "LEI STATUS": "Issued/Active",
+                                "LEI CODE": "98450098PEAE6654A804",
+                                "JURISDICTION": "Not Found",
+                                "ULTIMATE PARENT": "Not Found",
+                                "ENTITY CATEGORY": "Not Found",
+                                "video_path": "/Users/prabhuzamp/Downloads/pace-business-onboarding-copy-main 12.02.49/src/videos/2c1ba4b3-81c7-4a96-b9cc-b5fa5db5e69d.webm",
+                                "public_video_path": "/data/uploads/lei_check_98450098PEAE6654A804_20251216_000130.webm"
+                            }
+                        },
+                        {
+                            "type": "video",
+                            "label": "LEI Verification Recording",
+                            "icon": "video",
+                            "videoPath": "/data/uploads/lei_check_98450098PEAE6654A804_20251216_000130.webm",
+                            "id": "art-lei-video-1765823578749"
+                        },
+                        {
+                            "type": "table",
+                            "label": "Business Verification Summary",
+                            "icon": "table",
+                            "id": "art-bus-summary-1765823578749",
+                            "data": {
+                                "Business Address": "\u2116 303, 6, 40 \u0440\u043e\u043a\u0456\u0432 \u0416\u043e\u0432\u0442\u043d\u044f \u0432\u0443\u043b\u0438\u0446\u044f, \u041c\u0456\u0441\u0442\u0435\u0447\u043a\u043e 21-\u0439 \u0448\u0430\u0445\u0442\u0438, Makiivka, \u0421\u043e\u0432\u0454\u0442\u0441\u044c\u043a\u0438\u0439 \u0440\u0430\u0439\u043e\u043d, Makiivka Municipality, \u0414\u043e\u043d\u0435\u0446\u044c\u043a\u0438\u0439 \u0440\u0430\u0439\u043e\u043d, Donetsk Oblast, 86183, Ukraine",
+                                "LEI Code": "98450098PEAE6654A804",
+                                "Website URL": "trafcodmcc.com",
+                                "Address Source": "Manual"
+                            }
+                        }
+                    ],
+                    "time": "12:02 AM",
+                    "stepId": "business-verification-complete"
+                },
+                {
+                    "title": "Financial Profiling complete",
+                    "status": "success",
+                    "type": "success",
+                    "artifacts": [
+                        {
+                            "type": "table",
+                            "label": "Financial Profile",
+                            "icon": "table",
+                            "id": "art-fin-1765823678665",
+                            "data": {
+                                "Annual Turnover": "AED 8,00,000",
+                                "Main Sources of Funds": "Shareholder Capital",
+                                "Monthly Deposits": "AED 3,30,000",
+                                "Monthly Withdrawals": "AED 3,50,000",
+                                "Cash Deposits": "38%",
+                                "Cash Withdrawals": "38%",
+                                "Selected Products": "local_transfers, multiuser_access, payment_gateway",
+                                "Selected Plan": "Grow Plan"
+                            }
+                        }
+                    ],
+                    "time": "12:04 AM"
+                },
+                {
+                    "title": "Application Submitted, awaiting final review",
+                    "status": "success",
+                    "type": "success",
+                    "time": "12:04 AM"
+                },
+                {
+                    "title": "Application Approved",
+                    "status": "success",
+                    "type": "success",
+                    "time": "12:07 AM",
+                    "description": "Application has been approved by the Zamp team."
+                }
+            ]
+        },
+        "keyDetails": {
+            "title": "Key Details",
+            "items": [
+                {
+                    "status": "processing"
+                },
+                {
+                    "Online Presence": "Yes",
+                    "Website URL": "trafcodmcc.com",
+                    "International Operations": "No",
+                    "Operating Countries": "None",
+                    "Business Address": "\u2116 303, 6, 40 \u0440\u043e\u043a\u0456\u0432 \u0416\u043e\u0432\u0442\u043d\u044f \u0432\u0443\u043b\u0438\u0446\u044f, \u041c\u0456\u0441\u0442\u0435\u0447\u043a\u043e 21-\u0439 \u0448\u0430\u0445\u0442\u0438, Makiivka, \u0421\u043e\u0432\u0454\u0442\u0441\u044c\u043a\u0438\u0439 \u0440\u0430\u0439\u043e\u043d, Makiivka Municipality, \u0414\u043e\u043d\u0435\u0446\u044c\u043a\u0438\u0439 \u0440\u0430\u0439\u043e\u043d, Donetsk Oblast, 86183, Ukraine",
+                    "Address Source": "Manual",
+                    "LEI Code": "98450098PEAE6654A804"
+                },
+                {
+                    "status": "Done"
+                }
+            ]
+        },
+        "sidebarArtifacts": {
+            "title": "Artifacts",
+            "items": [
+                {
+                    "type": "image",
+                    "label": "Emirates ID Image",
+                    "icon": "image",
+                    "imagePath": "/data/uploads/Screenshot 2025-12-12 at 00.53.55.png",
+                    "id": "art-eid-1765823000934"
+                },
+                {
+                    "type": "table",
+                    "label": "Extracted Identity Data",
+                    "icon": "table",
+                    "data": {
+                        "Entered Name": "Zeeshan Yasin Muhammad Yasin",
+                        "Phone Number": "+97112334475456",
+                        "Email Address": "prabhu@zamp.ai",
+                        "Extracted Name": "Zeeshan Yasin Muhammad Yasin",
+                        "ID Number": "784-1989-1593287-9",
+                        "Nationality": "Pakistan",
+                        "Date of Birth": "04/10/1989",
+                        "Expiry Date": "22/05/2023"
+                    },
+                    "id": "art-eid-data-1765823000934"
+                },
+                {
+                    "type": "file",
+                    "label": "Proof of Address",
+                    "icon": "file",
+                    "pdfPath": "/data/uploads/UTILITY BILL \u2014 PROOF OF ADDRESS (1).pdf",
+                    "id": "art-pa-1765823327950"
+                },
+                {
+                    "type": "table",
+                    "label": "LEI Verification Data",
+                    "icon": "table",
+                    "id": "art-lei-data-1765823578749",
+                    "data": {
+                        "LEGAL NAME": "TRAFCO DMCC",
+                        "TRAFCO DMCC": "Registered At",
+                        "LEGAL ADDRESS": "Office No. 303, Fortune Tower",
+                        "COUNTRY": "United Arab Emirates",
+                        "LEI STATUS": "Issued/Active",
+                        "LEI CODE": "98450098PEAE6654A804",
+                        "JURISDICTION": "Not Found",
+                        "ULTIMATE PARENT": "Not Found",
+                        "ENTITY CATEGORY": "Not Found",
+                        "video_path": "/Users/prabhuzamp/Downloads/pace-business-onboarding-copy-main 12.02.49/src/videos/2c1ba4b3-81c7-4a96-b9cc-b5fa5db5e69d.webm",
+                        "public_video_path": "/data/uploads/lei_check_98450098PEAE6654A804_20251216_000130.webm"
+                    }
+                },
+                {
+                    "type": "video",
+                    "label": "LEI Verification Recording",
+                    "icon": "video",
+                    "videoPath": "/data/uploads/lei_check_98450098PEAE6654A804_20251216_000130.webm",
+                    "id": "art-lei-video-1765823578749"
+                },
+                {
+                    "type": "table",
+                    "label": "Business Verification Summary",
+                    "icon": "table",
+                    "id": "art-bus-summary-1765823578749",
+                    "data": {
+                        "Business Address": "\u2116 303, 6, 40 \u0440\u043e\u043a\u0456\u0432 \u0416\u043e\u0432\u0442\u043d\u044f \u0432\u0443\u043b\u0438\u0446\u044f, \u041c\u0456\u0441\u0442\u0435\u0447\u043a\u043e 21-\u0439 \u0448\u0430\u0445\u0442\u0438, Makiivka, \u0421\u043e\u0432\u0454\u0442\u0441\u044c\u043a\u0438\u0439 \u0440\u0430\u0439\u043e\u043d, Makiivka Municipality, \u0414\u043e\u043d\u0435\u0446\u044c\u043a\u0438\u0439 \u0440\u0430\u0439\u043e\u043d, Donetsk Oblast, 86183, Ukraine",
+                        "LEI Code": "98450098PEAE6654A804",
+                        "Website URL": "trafcodmcc.com",
+                        "Address Source": "Manual"
+                    }
+                },
+                {
+                    "type": "table",
+                    "label": "Financial Profile",
+                    "icon": "table",
+                    "id": "art-fin-1765823678665",
+                    "data": {
+                        "Annual Turnover": "AED 8,00,000",
+                        "Main Sources of Funds": "Shareholder Capital",
+                        "Monthly Deposits": "AED 3,30,000",
+                        "Monthly Withdrawals": "AED 3,50,000",
+                        "Cash Deposits": "38%",
+                        "Cash Withdrawals": "38%",
+                        "Selected Products": "local_transfers, multiuser_access, payment_gateway",
+                        "Selected Plan": "Grow Plan"
+                    }
+                }
+            ]
+        },
+        "messages": {
+            "title": "Messages",
+            "items": [
+                {
+                    "id": "msg-20251216000617",
+                    "sender": "Zamp",
+                    "content": "Why is the trade license from Sharjah and not Dubai?",
+                    "time": "12:06 AM",
+                    "timestamp": "2025-12-16T00:06:17.746404"
+                }
+            ]
+        }
+    }
+}

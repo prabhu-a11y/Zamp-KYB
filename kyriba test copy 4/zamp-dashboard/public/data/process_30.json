@@ -1,0 +1,349 @@
+{
+    "id": "30",
+    "sections": {
+        "overview": {
+            "title": "Overview",
+            "content": "Process Overview"
+        },
+        "activityLogs": {
+            "title": "Activity Logs",
+            "items": [
+                {
+                    "title": "Wio Onboarding Application started",
+                    "status": "processing",
+                    "type": "success",
+                    "time": "06:52 PM"
+                },
+                {
+                    "title": "Identity verification complete",
+                    "status": "success",
+                    "type": "success",
+                    "time": "06:54 PM",
+                    "stepId": "identity-verification",
+                    "artifacts": [
+                        {
+                            "type": "image",
+                            "label": "Emirates ID Image",
+                            "icon": "image",
+                            "imagePath": "/data/uploads/Screenshot 2025-12-12 at 00.53.55.png",
+                            "id": "art-eid-1765738497742"
+                        },
+                        {
+                            "type": "table",
+                            "label": "Extracted Identity Data",
+                            "icon": "table",
+                            "data": {
+                                "Entered Name": "Zeeshan Yasin Muhammad Yasin",
+                                "Phone Number": "+97112344345567",
+                                "Email Address": "z@g",
+                                "Extracted Name": "Zeeshan Yasin Muhammad Yasin",
+                                "ID Number": "784-1989-1593287-9",
+                                "Nationality": "Pakistan",
+                                "Date of Birth": "04/10/1989",
+                                "Expiry Date": "22/05/2023"
+                            },
+                            "id": "art-eid-data-1765738497742"
+                        }
+                    ]
+                },
+                {
+                    "title": "Eligibility Verified, Applicant has a Trade License",
+                    "status": "success",
+                    "type": "success",
+                    "time": "06:55 PM",
+                    "stepId": "eligibility-verification",
+                    "description": "User has a Trade License and is not in any restricted Industries"
+                },
+                {
+                    "title": "Document Verification Complete",
+                    "status": "success",
+                    "type": "success",
+                    "time": "06:56 PM",
+                    "stepId": "trade-license-verification",
+                    "description": "Applicant's Legal Type is International Organization",
+                    "artifacts": [
+                        {
+                            "type": "table",
+                            "label": "Verified License Data",
+                            "icon": "table",
+                            "id": "art-lic-ver-1765738577051",
+                            "data": {
+                                "Business Name": "TRAFCO DMCC",
+                                "License Number": "DMCC-912545",
+                                "Issuing Authority": "Dubai Multi Commodities Centre Authority - DMCCA",
+                                "Legal Type": "International Organization",
+                                "Activities": [
+                                    "Ship Charter"
+                                ],
+                                "Expiry Date": "2024-12-28",
+                                "video_path": "/Users/vigneshnarayanan/Desktop/pace-business-onboarding-copy-main/src/videos/42670505-af84-4d60-86c2-0ea906fe5674.webm",
+                                "public_video_path": "/data/uploads/license_check_CY2807_20251214_185617.webm"
+                            }
+                        },
+                        {
+                            "type": "video",
+                            "label": "Verification Recording",
+                            "icon": "video",
+                            "videoPath": "/data/uploads/license_check_CY2807_20251214_185617.webm",
+                            "id": "art-lic-vid-1765738577051"
+                        }
+                    ]
+                },
+                {
+                    "title": "Authority verified, all necessary documents received",
+                    "status": "success",
+                    "type": "success",
+                    "time": "06:58 PM",
+                    "stepId": "authority-verification"
+                },
+                {
+                    "title": "Common Authorization Documents",
+                    "status": "success",
+                    "type": "success",
+                    "artifacts": [
+                        {
+                            "type": "file",
+                            "label": "Memorandum of Association",
+                            "icon": "file",
+                            "pdfPath": "/data/uploads/Memorandum.pdf",
+                            "id": "art-moa-1765738667723"
+                        },
+                        {
+                            "type": "table",
+                            "label": "Shareholders (MOA)",
+                            "icon": "table",
+                            "data": [
+                                {
+                                    "name": "Ahmed Mohammed Al Rashid",
+                                    "nationality": "UAE",
+                                    "ownership": "38%"
+                                },
+                                {
+                                    "name": "Fatima Hassan Al Maktoum",
+                                    "nationality": "UAE",
+                                    "ownership": "22%"
+                                },
+                                {
+                                    "name": "Zeeshan Yasin Muhammad Yasin",
+                                    "nationality": "Pakistan",
+                                    "ownership": "15%"
+                                },
+                                {
+                                    "name": "Omar Khalid Al Suwaidi",
+                                    "nationality": "UAE",
+                                    "ownership": "15%"
+                                },
+                                {
+                                    "name": "Lina Abdulrahman Al Shamsi",
+                                    "nationality": "UAE",
+                                    "ownership": "10%"
+                                }
+                            ],
+                            "id": "art-moa-data-1765738667723"
+                        }
+                    ],
+                    "time": "06:57 PM",
+                    "stepId": "auth-doc-moa"
+                },
+                {
+                    "title": "Power of Attorney Uploaded",
+                    "status": "success",
+                    "type": "success",
+                    "artifacts": [
+                        {
+                            "type": "file",
+                            "label": "Power of Attorney",
+                            "icon": "file",
+                            "pdfPath": "/data/uploads/Power of attorny.pdf",
+                            "id": "art-poa-1765738681521"
+                        },
+                        {
+                            "type": "table",
+                            "label": "Extracted POA Data",
+                            "icon": "table",
+                            "data": {
+                                "grantedBy": "Ahmed Mohammed Al Rashid",
+                                "grantedTo": "Zeeshan Yasin Muhammad Yasin",
+                                "scope": "Communicate with Wio Bank PJSC, complete onboarding, verification, compliance, provide corporate documents, and represent the Company in banking matters.",
+                                "dateIssued": null,
+                                "expiryDate": null,
+                                "notarized": false
+                            },
+                            "id": "art-poa-data-1765738681521"
+                        }
+                    ],
+                    "time": "06:58 PM",
+                    "stepId": "auth-doc-poa"
+                },
+                {
+                    "title": "Bank Mandate Uploaded",
+                    "status": "success",
+                    "type": "success",
+                    "artifacts": [
+                        {
+                            "type": "file",
+                            "label": "Bank Mandate",
+                            "icon": "file",
+                            "pdfPath": "/data/uploads/Bank Mandate.pdf",
+                            "id": "art-bm-1765738693106"
+                        }
+                    ],
+                    "time": "06:58 PM",
+                    "stepId": "auth-doc-bm"
+                },
+                {
+                    "title": "Proof of Address Uploaded",
+                    "status": "success",
+                    "type": "success",
+                    "artifacts": [
+                        {
+                            "type": "file",
+                            "label": "Proof of Address",
+                            "icon": "file",
+                            "pdfPath": "/data/uploads/UTILITY BILL \u2014 PROOF OF ADDRESS.pdf",
+                            "id": "art-pa-1765738706239"
+                        }
+                    ],
+                    "time": "06:58 PM",
+                    "stepId": "auth-doc-pa"
+                }
+            ]
+        },
+        "keyDetails": {
+            "title": "Key Details",
+            "items": [
+                {
+                    "status": "processing"
+                }
+            ]
+        },
+        "sidebarArtifacts": {
+            "title": "Artifacts",
+            "items": [
+                {
+                    "type": "image",
+                    "label": "Emirates ID Image",
+                    "icon": "image",
+                    "imagePath": "/data/uploads/Screenshot 2025-12-12 at 00.53.55.png",
+                    "id": "art-eid-1765738497742"
+                },
+                {
+                    "type": "table",
+                    "label": "Extracted Identity Data",
+                    "icon": "table",
+                    "data": {
+                        "Entered Name": "Zeeshan Yasin Muhammad Yasin",
+                        "Phone Number": "+97112344345567",
+                        "Email Address": "z@g",
+                        "Extracted Name": "Zeeshan Yasin Muhammad Yasin",
+                        "ID Number": "784-1989-1593287-9",
+                        "Nationality": "Pakistan",
+                        "Date of Birth": "04/10/1989",
+                        "Expiry Date": "22/05/2023"
+                    },
+                    "id": "art-eid-data-1765738497742"
+                },
+                {
+                    "type": "table",
+                    "label": "Verified License Data",
+                    "icon": "table",
+                    "id": "art-lic-ver-1765738577051",
+                    "data": {
+                        "Business Name": "TRAFCO DMCC",
+                        "License Number": "DMCC-912545",
+                        "Issuing Authority": "Dubai Multi Commodities Centre Authority - DMCCA",
+                        "Legal Type": "International Organization",
+                        "Activities": [
+                            "Ship Charter"
+                        ],
+                        "Expiry Date": "2024-12-28",
+                        "video_path": "/Users/vigneshnarayanan/Desktop/pace-business-onboarding-copy-main/src/videos/42670505-af84-4d60-86c2-0ea906fe5674.webm",
+                        "public_video_path": "/data/uploads/license_check_CY2807_20251214_185617.webm"
+                    }
+                },
+                {
+                    "type": "video",
+                    "label": "Verification Recording",
+                    "icon": "video",
+                    "videoPath": "/data/uploads/license_check_CY2807_20251214_185617.webm",
+                    "id": "art-lic-vid-1765738577051"
+                },
+                {
+                    "type": "file",
+                    "label": "Memorandum of Association",
+                    "icon": "file",
+                    "pdfPath": "/data/uploads/Memorandum.pdf",
+                    "id": "art-moa-1765738667723"
+                },
+                {
+                    "type": "table",
+                    "label": "Shareholders (MOA)",
+                    "icon": "table",
+                    "data": [
+                        {
+                            "name": "Ahmed Mohammed Al Rashid",
+                            "nationality": "UAE",
+                            "ownership": "38%"
+                        },
+                        {
+                            "name": "Fatima Hassan Al Maktoum",
+                            "nationality": "UAE",
+                            "ownership": "22%"
+                        },
+                        {
+                            "name": "Zeeshan Yasin Muhammad Yasin",
+                            "nationality": "Pakistan",
+                            "ownership": "15%"
+                        },
+                        {
+                            "name": "Omar Khalid Al Suwaidi",
+                            "nationality": "UAE",
+                            "ownership": "15%"
+                        },
+                        {
+                            "name": "Lina Abdulrahman Al Shamsi",
+                            "nationality": "UAE",
+                            "ownership": "10%"
+                        }
+                    ],
+                    "id": "art-moa-data-1765738667723"
+                },
+                {
+                    "type": "file",
+                    "label": "Power of Attorney",
+                    "icon": "file",
+                    "pdfPath": "/data/uploads/Power of attorny.pdf",
+                    "id": "art-poa-1765738681521"
+                },
+                {
+                    "type": "table",
+                    "label": "Extracted POA Data",
+                    "icon": "table",
+                    "data": {
+                        "grantedBy": "Ahmed Mohammed Al Rashid",
+                        "grantedTo": "Zeeshan Yasin Muhammad Yasin",
+                        "scope": "Communicate with Wio Bank PJSC, complete onboarding, verification, compliance, provide corporate documents, and represent the Company in banking matters.",
+                        "dateIssued": null,
+                        "expiryDate": null,
+                        "notarized": false
+                    },
+                    "id": "art-poa-data-1765738681521"
+                },
+                {
+                    "type": "file",
+                    "label": "Bank Mandate",
+                    "icon": "file",
+                    "pdfPath": "/data/uploads/Bank Mandate.pdf",
+                    "id": "art-bm-1765738693106"
+                },
+                {
+                    "type": "file",
+                    "label": "Proof of Address",
+                    "icon": "file",
+                    "pdfPath": "/data/uploads/UTILITY BILL \u2014 PROOF OF ADDRESS.pdf",
+                    "id": "art-pa-1765738706239"
+                }
+            ]
+        }
+    }
+}

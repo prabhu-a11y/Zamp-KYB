@@ -1,0 +1,577 @@
+{
+    "id": "41",
+    "sections": {
+        "overview": {
+            "title": "Overview",
+            "content": "Process Overview"
+        },
+        "activityLogs": {
+            "title": "Activity Logs",
+            "items": [
+                {
+                    "title": "Wio Onboarding Application started",
+                    "status": "completed",
+                    "type": "success",
+                    "time": "10:03 AM"
+                },
+                {
+                    "title": "Identity verification complete",
+                    "status": "success",
+                    "type": "success",
+                    "time": "10:05 AM",
+                    "stepId": "identity-verification",
+                    "artifacts": [
+                        {
+                            "type": "image",
+                            "label": "Emirates ID Image",
+                            "icon": "image",
+                            "imagePath": "/data/uploads/Screenshot 2025-12-12 at 00.53.55.png",
+                            "id": "art-eid-1765793103510"
+                        },
+                        {
+                            "type": "table",
+                            "label": "Extracted Identity Data",
+                            "icon": "table",
+                            "data": {
+                                "Entered Name": "Zeeshan Yasin Muhammad Yasin",
+                                "Phone Number": "+97112233232122",
+                                "Email Address": "zeeshan@trafco.com",
+                                "Extracted Name": "Zeeshan Yasin Muhammad Yasin",
+                                "ID Number": "784-1989-1593287-9",
+                                "Nationality": "Pakistan",
+                                "Date of Birth": "04/10/1989",
+                                "Expiry Date": "22/05/2023"
+                            },
+                            "id": "art-eid-data-1765793103510"
+                        }
+                    ]
+                },
+                {
+                    "title": "Eligibility Verified, Applicant has a Trade License",
+                    "status": "success",
+                    "type": "success",
+                    "time": "10:05 AM",
+                    "stepId": "eligibility-verification",
+                    "description": "User has a Trade License and is not in any restricted Industries"
+                },
+                {
+                    "title": "Document Verification Complete",
+                    "status": "success",
+                    "type": "success",
+                    "time": "10:05 AM",
+                    "stepId": "trade-license-verification",
+                    "description": "Applicant's Legal Type is International Organization",
+                    "artifacts": [
+                        {
+                            "type": "table",
+                            "label": "Verified License Data",
+                            "icon": "table",
+                            "id": "art-lic-ver-1765793139909",
+                            "data": {
+                                "Business Name": "TRAFCO DMCC",
+                                "License Number": "DMCC-912545",
+                                "Issuing Authority": "Dubai Multi Commodities Centre Authority - DMCCA",
+                                "Legal Type": "International Organization",
+                                "Activities": [
+                                    "Ship Charter"
+                                ],
+                                "Expiry Date": "2024-12-28",
+                                "video_path": "/Users/vigneshnarayanan/Desktop/pace-business-onboarding-copy-main/src/videos/dc072262-3b57-4833-b02c-0a160df095fe.webm",
+                                "public_video_path": "/data/uploads/license_check_CY2807_20251215_100539.webm"
+                            }
+                        },
+                        {
+                            "type": "video",
+                            "label": "Verification Recording",
+                            "icon": "video",
+                            "videoPath": "/data/uploads/license_check_CY2807_20251215_100539.webm",
+                            "id": "art-lic-vid-1765793139909"
+                        }
+                    ]
+                },
+                {
+                    "title": "Authority verified, all necessary documents received",
+                    "status": "success",
+                    "type": "success",
+                    "time": "10:06 AM",
+                    "stepId": "authority-verification"
+                },
+                {
+                    "title": "Common Authorization Documents",
+                    "status": "success",
+                    "type": "success",
+                    "artifacts": [
+                        {
+                            "type": "file",
+                            "label": "Memorandum of Association",
+                            "icon": "file",
+                            "pdfPath": "/data/uploads/Memorandum (1).pdf",
+                            "id": "art-moa-1765793159366"
+                        },
+                        {
+                            "type": "table",
+                            "label": "Shareholders (MOA)",
+                            "icon": "table",
+                            "data": [
+                                {
+                                    "name": "Badar Tariq",
+                                    "nationality": "UAE",
+                                    "ownership": "45%"
+                                },
+                                {
+                                    "name": "Ahmed Mohammed Al Rashid",
+                                    "nationality": "UAE",
+                                    "ownership": "25%"
+                                },
+                                {
+                                    "name": "Fatima Hassan Al Maktoum",
+                                    "nationality": "Pakistan",
+                                    "ownership": "15%"
+                                },
+                                {
+                                    "name": "Omar Khalid Al Suwaidi",
+                                    "nationality": "UAE",
+                                    "ownership": "10%"
+                                },
+                                {
+                                    "name": "Lina Abdulrahman Al Shamsi",
+                                    "nationality": "Egypt",
+                                    "ownership": "5%"
+                                }
+                            ],
+                            "id": "art-moa-data-1765793159366"
+                        }
+                    ],
+                    "time": "10:05 AM",
+                    "stepId": "auth-doc-moa"
+                },
+                {
+                    "title": "Power of Attorney Uploaded",
+                    "status": "success",
+                    "type": "success",
+                    "artifacts": [
+                        {
+                            "type": "file",
+                            "label": "Power of Attorney",
+                            "icon": "file",
+                            "pdfPath": "/data/uploads/Power of attorny (1).pdf",
+                            "id": "art-poa-1765793175493"
+                        },
+                        {
+                            "type": "table",
+                            "label": "Extracted POA Data",
+                            "icon": "table",
+                            "data": {
+                                "grantedBy": "Badar Tariq",
+                                "grantedTo": "Zeeshan Yasin Muhammad Yasin",
+                                "scope": "Representing Trafco DMCC in all matters relating to opening and maintaining banking facilities with Wio Bank, including communication, onboarding, verification, compliance, providing corporate documents, and signing required forms.",
+                                "dateIssued": null,
+                                "expiryDate": null,
+                                "notarized": false
+                            },
+                            "id": "art-poa-data-1765793175493"
+                        }
+                    ],
+                    "time": "10:06 AM",
+                    "stepId": "auth-doc-poa"
+                },
+                {
+                    "title": "Bank Mandate Uploaded",
+                    "status": "success",
+                    "type": "success",
+                    "artifacts": [
+                        {
+                            "type": "file",
+                            "label": "Bank Mandate",
+                            "icon": "file",
+                            "pdfPath": "/data/uploads/Bank Mandate (1).pdf",
+                            "id": "art-bm-1765793184750"
+                        }
+                    ],
+                    "time": "10:06 AM",
+                    "stepId": "auth-doc-bm"
+                },
+                {
+                    "title": "Proof of Address Uploaded",
+                    "status": "success",
+                    "type": "success",
+                    "artifacts": [
+                        {
+                            "type": "file",
+                            "label": "Proof of Address",
+                            "icon": "file",
+                            "pdfPath": "/data/uploads/UTILITY BILL \u2014 PROOF OF ADDRESS (1).pdf",
+                            "id": "art-pa-1765793212119"
+                        }
+                    ],
+                    "time": "10:06 AM",
+                    "stepId": "auth-doc-pa"
+                },
+                {
+                    "title": "Business Verification Complete",
+                    "status": "completed",
+                    "type": "success",
+                    "artifacts": [
+                        {
+                            "type": "table",
+                            "label": "Website Verification Data",
+                            "icon": "table",
+                            "id": "art-web-data-1765793324435",
+                            "data": {
+                                "company_name": "Trafco DMCC",
+                                "address": "No.303, Fortune Tower, Jumeirah Lake Towers, Dubai",
+                                "business_services": [
+                                    {
+                                        "name": "Ship Charter",
+                                        "description": "Ship Charter Services"
+                                    }
+                                ],
+                                "countries_operating": [
+                                    "UAE"
+                                ],
+                                "people": [
+                                    {
+                                        "name": "Badar Tariq"
+                                    }
+                                ],
+                                "video_path": "/Users/vigneshnarayanan/Desktop/pace-business-onboarding-copy-main/src/videos/14ba91164adac0c309e0b26f62269159.webm",
+                                "public_video_path": "/data/uploads/website_check_20251215_100721.webm"
+                            }
+                        },
+                        {
+                            "type": "video",
+                            "label": "Website Verification Recording",
+                            "icon": "video",
+                            "videoPath": "/data/uploads/website_check_20251215_100721.webm",
+                            "id": "art-web-video-1765793324435"
+                        },
+                        {
+                            "type": "table",
+                            "label": "LEI Verification Data",
+                            "icon": "table",
+                            "id": "art-lei-data-1765793324435",
+                            "data": {
+                                "LEGAL NAME": "TRAFCO DMCC",
+                                "TRAFCO DMCC": "Registered At",
+                                "LEGAL ADDRESS": "Office No. 303, Fortune Tower",
+                                "COUNTRY": "United Arab Emirates",
+                                "LEI STATUS": "Issued/Active",
+                                "LEI CODE": "98450098PEAE6654A804",
+                                "JURISDICTION": "Not Found",
+                                "ULTIMATE PARENT": "Not Found",
+                                "ENTITY CATEGORY": "Not Found",
+                                "video_path": "/Users/vigneshnarayanan/Desktop/pace-business-onboarding-copy-main/src/videos/6db4e8ce-b322-44a2-9087-f1a2b64e1a52.webm",
+                                "public_video_path": "/data/uploads/lei_check_98450098PEAE6654A804_20251215_100744.webm"
+                            }
+                        },
+                        {
+                            "type": "video",
+                            "label": "LEI Verification Recording",
+                            "icon": "video",
+                            "videoPath": "/data/uploads/lei_check_98450098PEAE6654A804_20251215_100744.webm",
+                            "id": "art-lei-video-1765793324435"
+                        },
+                        {
+                            "type": "table",
+                            "label": "Business Verification Summary",
+                            "icon": "table",
+                            "id": "art-bus-summary-1765793324435",
+                            "data": {
+                                "Business Address": "Office No. 303, Fortune Tower",
+                                "LEI Code": "98450098PEAE6654A804",
+                                "Website URL": "https://www.trafcodmcc.com/",
+                                "Address Source": "Verified"
+                            }
+                        }
+                    ],
+                    "time": "10:08 AM",
+                    "stepId": "business-verification-complete"
+                },
+                {
+                    "title": "Financial Profiling complete",
+                    "status": "success",
+                    "type": "success",
+                    "artifacts": [
+                        {
+                            "type": "table",
+                            "label": "Financial Profile",
+                            "icon": "table",
+                            "id": "art-fin-1765793362625",
+                            "data": {
+                                "Annual Turnover": "AED 1,240,000",
+                                "Main Sources of Funds": "Family and Friends, Shareholder Capital",
+                                "Monthly Deposits": "AED 255,000",
+                                "Monthly Withdrawals": "AED 270,000",
+                                "Cash Deposits": "33%",
+                                "Cash Withdrawals": "31%",
+                                "Selected Products": "local_transfers, international_transfers, multiuser_access, payment_gateway",
+                                "Selected Plan": "Grow Plan"
+                            }
+                        }
+                    ],
+                    "time": "10:09 AM"
+                },
+                {
+                    "title": "Application Submitted, awaiting final review",
+                    "status": "success",
+                    "type": "success",
+                    "time": "10:09 AM"
+                },
+                {
+                    "title": "Application Approved",
+                    "status": "success",
+                    "type": "success",
+                    "time": "11:45 AM",
+                    "description": "Application has been approved by the Zamp team."
+                }
+            ]
+        },
+        "keyDetails": {
+            "title": "Key Details",
+            "items": [
+                {
+                    "status": "processing"
+                },
+                {
+                    "Online Presence": "Yes",
+                    "Website URL": "https://www.trafcodmcc.com/",
+                    "International Operations": "Yes",
+                    "Operating Countries": "Manyata Tech Park, Kempapura, Bengaluru North City Corporation, Bengaluru, Bangalore East, Bengaluru Urban, Karnataka, 560045, India",
+                    "Business Address": "Office No. 303, Fortune Tower",
+                    "Address Source": "Verified",
+                    "LEI Code": "98450098PEAE6654A804"
+                },
+                {
+                    "status": "Needs Review"
+                }
+            ]
+        },
+        "sidebarArtifacts": {
+            "title": "Artifacts",
+            "items": [
+                {
+                    "type": "image",
+                    "label": "Emirates ID Image",
+                    "icon": "image",
+                    "imagePath": "/data/uploads/Screenshot 2025-12-12 at 00.53.55.png",
+                    "id": "art-eid-1765793103510"
+                },
+                {
+                    "type": "table",
+                    "label": "Extracted Identity Data",
+                    "icon": "table",
+                    "data": {
+                        "Entered Name": "Zeeshan Yasin Muhammad Yasin",
+                        "Phone Number": "+97112233232122",
+                        "Email Address": "zeeshan@trafco.com",
+                        "Extracted Name": "Zeeshan Yasin Muhammad Yasin",
+                        "ID Number": "784-1989-1593287-9",
+                        "Nationality": "Pakistan",
+                        "Date of Birth": "04/10/1989",
+                        "Expiry Date": "22/05/2023"
+                    },
+                    "id": "art-eid-data-1765793103510"
+                },
+                {
+                    "type": "table",
+                    "label": "Verified License Data",
+                    "icon": "table",
+                    "id": "art-lic-ver-1765793139909",
+                    "data": {
+                        "Business Name": "TRAFCO DMCC",
+                        "License Number": "DMCC-912545",
+                        "Issuing Authority": "Dubai Multi Commodities Centre Authority - DMCCA",
+                        "Legal Type": "International Organization",
+                        "Activities": [
+                            "Ship Charter"
+                        ],
+                        "Expiry Date": "2024-12-28",
+                        "video_path": "/Users/vigneshnarayanan/Desktop/pace-business-onboarding-copy-main/src/videos/dc072262-3b57-4833-b02c-0a160df095fe.webm",
+                        "public_video_path": "/data/uploads/license_check_CY2807_20251215_100539.webm"
+                    }
+                },
+                {
+                    "type": "video",
+                    "label": "Verification Recording",
+                    "icon": "video",
+                    "videoPath": "/data/uploads/license_check_CY2807_20251215_100539.webm",
+                    "id": "art-lic-vid-1765793139909"
+                },
+                {
+                    "type": "file",
+                    "label": "Memorandum of Association",
+                    "icon": "file",
+                    "pdfPath": "/data/uploads/Memorandum (1).pdf",
+                    "id": "art-moa-1765793159366"
+                },
+                {
+                    "type": "table",
+                    "label": "Shareholders (MOA)",
+                    "icon": "table",
+                    "data": [
+                        {
+                            "name": "Badar Tariq",
+                            "nationality": "UAE",
+                            "ownership": "45%"
+                        },
+                        {
+                            "name": "Ahmed Mohammed Al Rashid",
+                            "nationality": "UAE",
+                            "ownership": "25%"
+                        },
+                        {
+                            "name": "Fatima Hassan Al Maktoum",
+                            "nationality": "Pakistan",
+                            "ownership": "15%"
+                        },
+                        {
+                            "name": "Omar Khalid Al Suwaidi",
+                            "nationality": "UAE",
+                            "ownership": "10%"
+                        },
+                        {
+                            "name": "Lina Abdulrahman Al Shamsi",
+                            "nationality": "Egypt",
+                            "ownership": "5%"
+                        }
+                    ],
+                    "id": "art-moa-data-1765793159366"
+                },
+                {
+                    "type": "file",
+                    "label": "Power of Attorney",
+                    "icon": "file",
+                    "pdfPath": "/data/uploads/Power of attorny (1).pdf",
+                    "id": "art-poa-1765793175493"
+                },
+                {
+                    "type": "table",
+                    "label": "Extracted POA Data",
+                    "icon": "table",
+                    "data": {
+                        "grantedBy": "Badar Tariq",
+                        "grantedTo": "Zeeshan Yasin Muhammad Yasin",
+                        "scope": "Representing Trafco DMCC in all matters relating to opening and maintaining banking facilities with Wio Bank, including communication, onboarding, verification, compliance, providing corporate documents, and signing required forms.",
+                        "dateIssued": null,
+                        "expiryDate": null,
+                        "notarized": false
+                    },
+                    "id": "art-poa-data-1765793175493"
+                },
+                {
+                    "type": "file",
+                    "label": "Bank Mandate",
+                    "icon": "file",
+                    "pdfPath": "/data/uploads/Bank Mandate (1).pdf",
+                    "id": "art-bm-1765793184750"
+                },
+                {
+                    "type": "file",
+                    "label": "Proof of Address",
+                    "icon": "file",
+                    "pdfPath": "/data/uploads/UTILITY BILL \u2014 PROOF OF ADDRESS (1).pdf",
+                    "id": "art-pa-1765793212119"
+                },
+                {
+                    "type": "table",
+                    "label": "Website Verification Data",
+                    "icon": "table",
+                    "id": "art-web-data-1765793324435",
+                    "data": {
+                        "company_name": "Trafco DMCC",
+                        "address": "No.303, Fortune Tower, Jumeirah Lake Towers, Dubai",
+                        "business_services": [
+                            {
+                                "name": "Ship Charter",
+                                "description": "Ship Charter Services"
+                            }
+                        ],
+                        "countries_operating": [
+                            "UAE"
+                        ],
+                        "people": [
+                            {
+                                "name": "Badar Tariq"
+                            }
+                        ],
+                        "video_path": "/Users/vigneshnarayanan/Desktop/pace-business-onboarding-copy-main/src/videos/14ba91164adac0c309e0b26f62269159.webm",
+                        "public_video_path": "/data/uploads/website_check_20251215_100721.webm"
+                    }
+                },
+                {
+                    "type": "video",
+                    "label": "Website Verification Recording",
+                    "icon": "video",
+                    "videoPath": "/data/uploads/website_check_20251215_100721.webm",
+                    "id": "art-web-video-1765793324435"
+                },
+                {
+                    "type": "table",
+                    "label": "LEI Verification Data",
+                    "icon": "table",
+                    "id": "art-lei-data-1765793324435",
+                    "data": {
+                        "LEGAL NAME": "TRAFCO DMCC",
+                        "TRAFCO DMCC": "Registered At",
+                        "LEGAL ADDRESS": "Office No. 303, Fortune Tower",
+                        "COUNTRY": "United Arab Emirates",
+                        "LEI STATUS": "Issued/Active",
+                        "LEI CODE": "98450098PEAE6654A804",
+                        "JURISDICTION": "Not Found",
+                        "ULTIMATE PARENT": "Not Found",
+                        "ENTITY CATEGORY": "Not Found",
+                        "video_path": "/Users/vigneshnarayanan/Desktop/pace-business-onboarding-copy-main/src/videos/6db4e8ce-b322-44a2-9087-f1a2b64e1a52.webm",
+                        "public_video_path": "/data/uploads/lei_check_98450098PEAE6654A804_20251215_100744.webm"
+                    }
+                },
+                {
+                    "type": "video",
+                    "label": "LEI Verification Recording",
+                    "icon": "video",
+                    "videoPath": "/data/uploads/lei_check_98450098PEAE6654A804_20251215_100744.webm",
+                    "id": "art-lei-video-1765793324435"
+                },
+                {
+                    "type": "table",
+                    "label": "Business Verification Summary",
+                    "icon": "table",
+                    "id": "art-bus-summary-1765793324435",
+                    "data": {
+                        "Business Address": "Office No. 303, Fortune Tower",
+                        "LEI Code": "98450098PEAE6654A804",
+                        "Website URL": "https://www.trafcodmcc.com/",
+                        "Address Source": "Verified"
+                    }
+                },
+                {
+                    "type": "table",
+                    "label": "Financial Profile",
+                    "icon": "table",
+                    "id": "art-fin-1765793362625",
+                    "data": {
+                        "Annual Turnover": "AED 1,240,000",
+                        "Main Sources of Funds": "Family and Friends, Shareholder Capital",
+                        "Monthly Deposits": "AED 255,000",
+                        "Monthly Withdrawals": "AED 270,000",
+                        "Cash Deposits": "33%",
+                        "Cash Withdrawals": "31%",
+                        "Selected Products": "local_transfers, international_transfers, multiuser_access, payment_gateway",
+                        "Selected Plan": "Grow Plan"
+                    }
+                }
+            ]
+        },
+        "messages": {
+            "title": "Messages",
+            "items": [
+                {
+                    "id": "msg-20251215114528",
+                    "sender": "Zamp",
+                    "content": "hi",
+                    "time": "11:45 AM",
+                    "timestamp": "2025-12-15T11:45:28.524447"
+                }
+            ]
+        }
+    }
+}

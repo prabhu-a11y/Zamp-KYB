@@ -1,0 +1,182 @@
+{
+    "logs": [
+        {
+            "title": "Wio Onboarding Application started",
+            "status": "processing",
+            "type": "success",
+            "id": "log_0_1765259092.355678",
+            "time": "11:14 AM"
+        },
+        {
+            "title": "Identity Verification in Progress",
+            "status": "processing",
+            "type": "info",
+            "id": "log_1_1765259092.3588",
+            "time": "11:14 AM"
+        },
+        {
+            "title": "Identity verification complete",
+            "status": "success",
+            "type": "success",
+            "artifacts": [
+                {
+                    "type": "image",
+                    "label": "Emirates ID Image",
+                    "id": "art-eid-img-1765259134377",
+                    "icon": "image",
+                    "imagePath": "/data/uploads/1765259134.374335_67766281ba687b8fcec33823_Emirates ID Explained.jpg"
+                },
+                {
+                    "type": "table",
+                    "label": "Extracted Identity Data",
+                    "id": "art-eid-data-1765259134377",
+                    "icon": "table",
+                    "data": {
+                        "FullName": "Hammad Salem Naser",
+                        "IDNumber": "784-1234-1234567-1",
+                        "Nationality": "United Arab Emirates",
+                        "DateOfBirth": "",
+                        "ExpiryDate": "",
+                        "Mobile": "+9711234223222",
+                        "Email": "apple@apple.com"
+                    }
+                }
+            ],
+            "id": "log_2_1765259134.379936",
+            "time": "11:15 AM"
+        },
+        {
+            "title": "Eligibility Verification in Progress",
+            "status": "processing",
+            "type": "info",
+            "id": "log_3_1765259134.383527",
+            "time": "11:15 AM"
+        },
+        {
+            "title": "Document Verification Complete",
+            "status": "success",
+            "type": "success",
+            "description": "Applicant's Legal Type is Limited Liability Company - Single Owner(LLC - SO)",
+            "artifacts": [
+                {
+                    "type": "table",
+                    "label": "Verified License Data",
+                    "id": "art-lic-ver-1765259175180",
+                    "icon": "table",
+                    "data": {
+                        "Business Name": "GOLKAR GOODS WHOLESALERS CO. L.L.C",
+                        "License Number": "1234538",
+                        "Issuing Authority": "Department of Economy and Tourism - DET",
+                        "Legal Type": "Limited Liability Company - Single Owner(LLC - SO)",
+                        "Activities": [
+                            "Goods Wholesalers"
+                        ],
+                        "Expiry Date": "2024-09-10"
+                    }
+                }
+            ],
+            "id": "log_4_1765259175.187438",
+            "time": "11:16 AM"
+        },
+        {
+            "title": "Authority Verification pending",
+            "status": "processing",
+            "type": "warning",
+            "id": "log_5_1765259175.193339",
+            "time": "11:16 AM"
+        },
+        {
+            "title": "Financial Profiling complete",
+            "status": "success",
+            "type": "success",
+            "artifacts": [
+                {
+                    "type": "table",
+                    "label": "Financial Profile",
+                    "icon": "table",
+                    "id": "art-fin-1765259619486",
+                    "data": {
+                        "Annual Turnover": "Less than AED 100,000",
+                        "Monthly Deposits": "AED 50,000 - 100,000",
+                        "Cash Deposits": "24%",
+                        "Cash Withdrawals": "20%"
+                    }
+                }
+            ],
+            "id": "log_6_1765259619.518815",
+            "time": "11:23 AM"
+        },
+        {
+            "title": "Review pending",
+            "status": "processing",
+            "type": "warning",
+            "id": "log_7_1765259619.522992",
+            "time": "11:23 AM"
+        },
+        {
+            "title": "Review complete. Application submitted successfully with reference number REF-2025-WIO874",
+            "status": "success",
+            "type": "success",
+            "id": "log_8_1765259638.403901",
+            "time": "11:23 AM"
+        }
+    ],
+    "keyDetails": {
+        "processName": "Wio Onboarding Application",
+        "team": "Wio Applicant",
+        "processingDate": "2025-12-09",
+        "status": "Done"
+    },
+    "sidebarArtifacts": [
+        {
+            "type": "image",
+            "label": "Emirates ID Image",
+            "id": "art-eid-img-1765259134377",
+            "icon": "image",
+            "imagePath": "/data/uploads/1765259134.374335_67766281ba687b8fcec33823_Emirates ID Explained.jpg"
+        },
+        {
+            "type": "table",
+            "label": "Extracted Identity Data",
+            "id": "art-eid-data-1765259134377",
+            "icon": "table",
+            "data": {
+                "FullName": "Hammad Salem Naser",
+                "IDNumber": "784-1234-1234567-1",
+                "Nationality": "United Arab Emirates",
+                "DateOfBirth": "",
+                "ExpiryDate": "",
+                "Mobile": "+9711234223222",
+                "Email": "apple@apple.com"
+            }
+        },
+        {
+            "type": "table",
+            "label": "Verified License Data",
+            "id": "art-lic-ver-1765259175180",
+            "icon": "table",
+            "data": {
+                "Business Name": "GOLKAR GOODS WHOLESALERS CO. L.L.C",
+                "License Number": "1234538",
+                "Issuing Authority": "Department of Economy and Tourism - DET",
+                "Legal Type": "Limited Liability Company - Single Owner(LLC - SO)",
+                "Activities": [
+                    "Goods Wholesalers"
+                ],
+                "Expiry Date": "2024-09-10"
+            }
+        },
+        {
+            "type": "table",
+            "label": "Financial Profile",
+            "icon": "table",
+            "id": "art-fin-1765259619486",
+            "data": {
+                "Annual Turnover": "Less than AED 100,000",
+                "Monthly Deposits": "AED 50,000 - 100,000",
+                "Cash Deposits": "24%",
+                "Cash Withdrawals": "20%"
+            }
+        }
+    ]
+}

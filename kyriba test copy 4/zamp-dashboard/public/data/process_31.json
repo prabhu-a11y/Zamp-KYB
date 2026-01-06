@@ -1,0 +1,42 @@
+{
+    "id": "31",
+    "sections": {
+        "overview": {
+            "title": "Overview",
+            "content": "Process Overview"
+        },
+        "activityLogs": {
+            "title": "Activity Logs",
+            "items": [
+                {
+                    "title": "Wio Onboarding Application started",
+                    "status": "processing",
+                    "type": "success",
+                    "time": "07:45 PM"
+                },
+                {
+                    "title": "Identity Verification in Progress",
+                    "status": "processing",
+                    "type": "info",
+                    "time": "07:45 PM",
+                    "stepId": "identity-verification"
+                },
+                {
+                    "title": "Applicant Name Captured",
+                    "status": "processing",
+                    "type": "info",
+                    "description": "Name entered: h",
+                    "time": "07:45 PM"
+                }
+            ]
+        },
+        "keyDetails": {
+            "title": "Key Details",
+            "items": [
+                {
+                    "status": "processing"
+                }
+            ]
+        }
+    }
+}

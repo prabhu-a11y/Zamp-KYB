@@ -1,0 +1,5 @@
+2025/12/09-02:41:12.441 101316 Creating DB /Users/vigneshnarayanan/Desktop/pace-business-onboarding-copy-main/src/browser_profile/Default/Local Storage/leveldb since it was missing.
+2025/12/09-02:41:12.446 101316 Reusing MANIFEST /Users/vigneshnarayanan/Desktop/pace-business-onboarding-copy-main/src/browser_profile/Default/Local Storage/leveldb/MANIFEST-000001
+2025/12/09-02:42:12.454 101319 Level-0 table #5: started
+2025/12/09-02:42:12.458 101319 Level-0 table #5: 25434 bytes OK
+2025/12/09-02:42:12.461 101319 Delete type=0 #3
