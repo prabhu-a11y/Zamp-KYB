@@ -629,7 +629,30 @@ async def get_all_processes():
                 return ""
 
             customer_name = p.get("applicant_name") or get_val("customerName") or "Unknown"
-            entity_name = get_val("entityName") or "New Entity"
+            
+            # Extract entity name from trade license verification if available
+            entity_name = get_val("entityName")
+            if not entity_name or entity_name == "New Entity":
+                # Try to extract from trade license verification artifacts
+                activity_logs = details.get("sections", {}).get("activityLogs", {}).get("items", [])
+                for log in activity_logs:
+                    if log.get("title") == "Document Verification Complete":
+                        # Found the trade license verification log
+                        artifacts = log.get("artifacts", [])
+                        for artifact in artifacts:
+                            if artifact.get("label") == "Verified License Data" and artifact.get("type") == "table":
+                                artifact_data = artifact.get("data", {})
+                                business_name = artifact_data.get("Business Name", "")
+                                if business_name:
+                                    entity_name = business_name
+                                    break
+                        if entity_name and entity_name != "New Entity":
+                            break
+                
+                # If still not found, leave blank instead of "New Entity"
+                if not entity_name or entity_name == "New Entity":
+                    entity_name = ""
+            
             processing_date = p.get("created_at", "").split("T")[0]
             status = p.get("status")
             stock_id = p.get("stock_id")
