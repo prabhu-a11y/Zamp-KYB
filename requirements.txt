@@ -4,5 +4,3 @@ supabase
 google-generativeai
 python-multipart
 requests
-playwright
-playwright-stealth

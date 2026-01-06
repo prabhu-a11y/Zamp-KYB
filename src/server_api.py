@@ -20,9 +20,21 @@ import os
 import json
 import shutil
 from datetime import datetime
-from .browser import extract_license_info
-from .browser_lei import extract_lei_info
-from .browser2 import extract_website_data
+
+# Browser automation imports (optional - not available on Vercel due to size limits)
+try:
+    from .browser import extract_license_info
+    from .browser_lei import extract_lei_info
+    from .browser2 import extract_website_data
+    BROWSER_AVAILABLE = True
+except ImportError:
+    # Gracefully handle missing browser modules
+    extract_license_info = None
+    extract_lei_info = None
+    extract_website_data = None
+    BROWSER_AVAILABLE = False
+    print("Warning: Browser automation modules not available (Playwright not installed)")
+
 import google.generativeai as genai
 from supabase import create_client, Client
 
@@ -101,6 +113,9 @@ async def upload_to_supabase(file_data, filename, content_type=None):
 
 @app.post("/verify-lei")
 async def verify_lei(request: LEIRequest):
+    if not BROWSER_AVAILABLE or extract_lei_info is None:
+        return {"error": "Browser automation not available on this deployment. Please use local development environment for browser-based verification."}
+    
     try:
         print(f"Received request for LEI: {request.leiCode}")
         
