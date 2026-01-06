@@ -62,7 +62,7 @@ export function HelpChat({ contextData, stepInfo = "Onboarding Process", onToggl
         setIsLoading(true);
 
         try {
-            const response = await fetch("http://localhost:8000/chat/help", {
+            const response = await fetch("/chat/help", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({

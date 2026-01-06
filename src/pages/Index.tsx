@@ -863,7 +863,7 @@ const Index = () => {
     setIsTyping(true);
     addAssistantMessage(`Verifying website: ${url}...`);
     try {
-      const response = await fetch("http://localhost:8000/verify-website", {
+      const response = await fetch(`${ZAMP_API_URL}/verify-website`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ url }),

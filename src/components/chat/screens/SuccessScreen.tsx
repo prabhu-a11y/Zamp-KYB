@@ -41,14 +41,14 @@ export function SuccessScreen({ email, referenceNumber, contextData, stepInfo, z
     const fetchData = async () => {
       try {
         // Fetch Messages
-        const msgRes = await fetch(`http://localhost:8000/zamp/messages/${zampProcessId}`);
+        const msgRes = await fetch(`/zamp/messages/${zampProcessId}`);
         if (msgRes.ok) {
           const data = await msgRes.json();
           setMessages(data.messages || []);
         }
 
         // Fetch Status
-        const statusRes = await fetch(`http://localhost:8000/zamp/status/${zampProcessId}`);
+        const statusRes = await fetch(`/zamp/status/${zampProcessId}`);
         if (statusRes.ok) {
           const data = await statusRes.json();
           setProcessStatus(data.status);
@@ -84,7 +84,7 @@ export function SuccessScreen({ email, referenceNumber, contextData, stepInfo, z
     if (!contentToSend.trim() || !zampProcessId) return;
     setSending(true);
     try {
-      await fetch('http://localhost:8000/zamp/message', {
+      await fetch('/zamp/message', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -110,7 +110,7 @@ export function SuccessScreen({ email, referenceNumber, contextData, stepInfo, z
       const formData = new FormData();
       formData.append("file", file);
 
-      const res = await fetch("http://localhost:8000/zamp/upload", {
+      const res = await fetch("/zamp/upload", {
         method: "POST",
         body: formData,
       });
