@@ -163,7 +163,7 @@ const DashboardLayout = () => {
                     <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center gap-2 px-3.5 py-1.5 bg-gray-50/50 border border-gray-100 rounded-lg">
                         <div className="flex items-center gap-1.5 opacity-70">
                             <Plus className="w-3.5 h-3.5 text-gray-400" />
-                            <span className="text-[11px] font-medium text-gray-500">Work with Zamp</span>
+                            <span className="text-[11px] font-medium text-gray-500">Work with Pace</span>
                         </div>
                         <div className="flex items-center gap-1 ml-1">
                             <kbd className="px-1.5 py-0.5 text-[10px] font-bold text-gray-400 bg-white border border-gray-200 rounded shadow-sm">
