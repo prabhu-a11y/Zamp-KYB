@@ -237,7 +237,9 @@ const ProcessList = () => {
                     </div>
                 )}
             </div>
-            );
+        </div>
+    );
 };
 
-            export default ProcessList;
+export default ProcessList;
+export default ProcessList;
