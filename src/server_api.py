@@ -20,9 +20,9 @@ import os
 import json
 import shutil
 from datetime import datetime
-from browser import extract_license_info
-from browser_lei import extract_lei_info
-from browser2 import extract_website_data
+from .browser import extract_license_info
+from .browser_lei import extract_lei_info
+from .browser2 import extract_website_data
 import google.generativeai as genai
 from supabase import create_client, Client
 
