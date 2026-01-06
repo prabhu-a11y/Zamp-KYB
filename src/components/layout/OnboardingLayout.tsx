@@ -3,9 +3,10 @@ import { ProgressStepper, Step } from "@/components/chat/ProgressStepper";
 import { cn } from "@/lib/utils";
 import { PanelLeftClose, PanelLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import wioLogo from "@/assets/wio-logo.png";
 import { OnboardingData, ScreenId } from "@/hooks/useOnboardingFlow";
 import { HelpChatButton } from "@/components/chat/HelpChatButton";
+
+const ZAMP_LOGO = "https://www.zamp.ai/images/Home/logos/zamp_black.svg";
 
 interface OnboardingLayoutProps {
   children: ReactNode;
@@ -37,7 +38,7 @@ export const OnboardingLayout = ({
           <div className="p-6 pb-4 border-b border-border flex-shrink-0">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-lg bg-background flex items-center justify-center flex-shrink-0 p-1">
-                <img src={wioLogo} alt="Wio" className="w-full h-full object-contain dark:invert" />
+                <img src={ZAMP_LOGO} alt="Zamp" className="w-full h-full object-contain" />
               </div>
               <div className="min-w-0">
                 <p className="font-semibold text-foreground truncate">Wio Onboarding</p>
