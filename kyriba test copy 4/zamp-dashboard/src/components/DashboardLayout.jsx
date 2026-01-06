@@ -147,7 +147,7 @@ const DashboardLayout = () => {
 
                         <div className="flex items-center gap-2">
                             <span className="text-[15px] font-semibold text-gray-900">
-                                {isProcessDetailPage ? "Activity Logs" : "Accounts Payable"}
+                                {isProcessDetailPage ? "Activity Logs" : "Client onboarding"}
                             </span>
                         </div>
                     </div>
