@@ -37,7 +37,7 @@ const CollapsibleReasoning = ({ reasons }) => {
 };
 
 // --- Zamp Integration Helpers ---
-const ZAMP_API_URL = import.meta.env.VITE_API_URL || "";
+const ZAMP_API_URL = import.meta.env.VITE_API_URL || (window.location.hostname === 'localhost' ? 'http://localhost:8000' : '');
 
 const ReviewActions = ({ processId, messages, refresh, rejectionReasons = [], onArtifactClick }) => {
     const [showChat, setShowChat] = useState(false);

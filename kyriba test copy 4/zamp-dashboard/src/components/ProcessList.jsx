@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Filter, Check, Loader2 } from 'lucide-react';
 
-const ZAMP_API_URL = import.meta.env.VITE_API_URL || "";
+const ZAMP_API_URL = import.meta.env.VITE_API_URL || (window.location.hostname === 'localhost' ? 'http://localhost:8000' : '');
 
 const ProcessList = () => {
     const navigate = useNavigate();
