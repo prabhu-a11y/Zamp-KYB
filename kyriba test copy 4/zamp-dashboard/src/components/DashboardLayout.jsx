@@ -40,8 +40,8 @@ const DashboardLayout = () => {
             {isSidebarOpen && (
                 <div className="w-[230px] bg-white flex flex-col flex-shrink-0 transition-all duration-300 relative border-r border-gray-200">
                     {/* Logo Area */}
-                    <div className="h-12 flex items-center justify-between px-3">
-                        <img src={checkIcon} alt="check" className="w-6 h-6" />
+                    <div className="h-12 flex items-center justify-between px-4">
+                        <img src="/logooo.svg" alt="Pace Logo" className="h-7 w-auto" />
                         <button
                             onClick={() => setIsSidebarOpen(!isSidebarOpen)}
                             className="text-gray-500 hover:text-gray-700 focus:outline-none"
