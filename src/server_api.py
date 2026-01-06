@@ -111,16 +111,15 @@ async def upload_to_supabase(file_data, filename, content_type=None):
         # Fallback: if already exists, return URL
         return supabase.storage.from_("zamp-uploads").get_public_url(filename)
 
+from .lei_api import extract_lei_info_api
+
 @app.post("/verify-lei")
 async def verify_lei(request: LEIRequest):
-    if not BROWSER_AVAILABLE or extract_lei_info is None:
-        return {"error": "Browser automation not available on this deployment. Please use local development environment for browser-based verification."}
-    
     try:
         print(f"Received request for LEI: {request.leiCode}")
         
-        # Run extraction
-        data = await extract_lei_info(request.leiCode)
+        # Use API-based extraction (no browser automation required)
+        data = await extract_lei_info_api(request.leiCode)
         
         # Handle Video
         video_path = data.get("video_path")
