@@ -604,5 +604,68 @@ async def approve_application(processId: str):
         print(f"Error approving application: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
+# --- Legacy Compatibility Endpoints (Serve Supabase data as JSON files) ---
+
+@app.get("/zamp/app-data/processes.json")
+async def get_all_processes():
+    if not supabase:
+        return []
+    try:
+        # Fetch all processes
+        res = supabase.table("processes").select("*").order("id", desc=False).execute()
+        processes = []
+        for p in res.data:
+            # Transform to match old processes.json structure if needed
+            # Old structure: { id, customerName, entityName, status, processingDate, location, tasks: { completed, total } }
+            # Since we store 'details' which has keyDetails, we can extract from there.
+            
+            details = p.get("details", {})
+            key_details = details.get("sections", {}).get("keyDetails", {}).get("items", [])
+            
+            # Helper to find value in keyDetails list
+            def get_val(key):
+                for item in key_details:
+                    if key in item: return item[key]
+                return ""
+
+            customer_name = p.get("applicant_name") or get_val("customerName") or "Unknown"
+            entity_name = get_val("entityName") or "New Entity"
+            processing_date = p.get("created_at", "").split("T")[0]
+            status = p.get("status")
+            stock_id = p.get("stock_id")
+            
+            # Simple task completion logic (mock)
+            tasks = {"completed": 8, "total": 10} 
+            if status == "Done": tasks = {"completed": 10, "total": 10}
+            
+            processes.append({
+                "id": int(p["id"]),
+                "stockId": stock_id,
+                "customerName": customer_name,
+                "entityName": entity_name,
+                "location": get_val("location") or "UAE",
+                "processingDate": processing_date,
+                "status": status,
+                "tasks": tasks
+            })
+        return processes
+    except Exception as e:
+        print(f"Error fetching process list: {e}")
+        return []
+
+@app.get("/zamp/app-data/process_{process_id}.json")
+async def get_process_details_endpoint(process_id: str):
+    if not supabase:
+        raise HTTPException(status_code=500, detail="Supabase not configured")
+    try:
+        res = supabase.table("processes").select("details").eq("id", process_id).execute()
+        if not res.data:
+            raise HTTPException(status_code=404, detail="Process not found")
+            
+        return res.data[0]["details"]
+    except Exception as e:
+         print(f"Error fetching process details: {e}")
+         raise HTTPException(status_code=404, detail="Process not found")
+
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)

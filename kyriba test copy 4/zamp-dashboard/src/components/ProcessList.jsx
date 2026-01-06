@@ -1,11 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Filter, Check, Loader2 } from 'lucide-react';
-import processesData from '../data/processes.json';
+
+const ZAMP_API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
 const ProcessList = () => {
     const navigate = useNavigate();
     const [activeTab, setActiveTab] = useState('Done');
+    const [processesData, setProcessesData] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchProcesses = async () => {
+            try {
+                const response = await fetch(`${ZAMP_API_URL}/zamp/app-data/processes.json`);
+                if (response.ok) {
+                    const data = await response.json();
+                    setProcessesData(data);
+                }
+            } catch (error) {
+                console.error("Error fetching processes:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchProcesses();
+        const interval = setInterval(fetchProcesses, 5000); // Poll every 5 seconds
+        return () => clearInterval(interval);
+    }, []);
 
     // Filter processes based on active tab
     const getProcessesByStatus = (status) => {
@@ -58,6 +81,10 @@ const ProcessList = () => {
             </div>
         );
     };
+
+    if (loading) {
+        return <div className="flex h-screen items-center justify-center"><Loader2 className="w-8 h-8 animate-spin text-gray-400" /></div>;
+    }
 
     return (
         <div className="bg-white min-h-screen">
@@ -191,7 +218,7 @@ const ProcessList = () => {
                                         </td>
 
                                         <td className="px-4 py-2 whitespace-nowrap text-center">
-                                            <span className="text-xs text-gray-600">{process.year}</span>
+                                            <span className="text-xs text-gray-600">{process.processingDate || process.year}</span>
                                         </td>
 
                                         <td className="px-6 py-2 whitespace-nowrap">

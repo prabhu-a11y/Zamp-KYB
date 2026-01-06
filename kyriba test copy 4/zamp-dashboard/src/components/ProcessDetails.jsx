@@ -235,14 +235,17 @@ const ProcessDetails = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(`/data/process_${id}.json`);
+                // Fetch from new backend endpoint instead of static file
+                const response = await fetch(`${ZAMP_API_URL}/zamp/app-data/process_${id}.json`);
                 if (!response.ok) {
                     throw new Error('Process data not found');
                 }
                 const jsonData = await response.json();
                 setData(jsonData);
 
-                // Fetch live status from API (Single Source of Truth)
+                // Fetch live status is now redundant as main fetch gets latest, but keeping for compatibility if needed.
+                // We can trust the main fetch now as it comes from DB.
+                // But for polling status updates specifically, the status endpoint is lighter.
                 const statusRes = await fetch(`${ZAMP_API_URL}/zamp/status/${id}`);
                 if (statusRes.ok) {
                     const statusData = await statusRes.json();
@@ -271,7 +274,8 @@ const ProcessDetails = () => {
     useEffect(() => {
         const fetchAllProcesses = async () => {
             try {
-                const response = await fetch('/data/processes.json');
+                // Fetch from new backend endpoint
+                const response = await fetch(`${ZAMP_API_URL}/zamp/app-data/processes.json`);
                 if (response.ok) {
                     const processes = await response.json();
                     const ids = processes.map(p => p.id).sort((a, b) => a - b);
