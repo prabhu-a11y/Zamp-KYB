@@ -231,7 +231,7 @@ const KnowledgeBase = () => {
 
                         <h1 className="text-2xl font-semibold text-gray-900 mb-8 flex items-center justify-center gap-3">
                             Ask
-                            <img src="/logooo.svg" alt="Pace Logo" className="h-8 w-8" />
+                            <img src="https://www.zamp.ai/images/Home/logos/zamp_black.svg" alt="Zamp Logo" className="h-8 w-8" />
                             Pace anything about Client Onboarding
                         </h1>
 
